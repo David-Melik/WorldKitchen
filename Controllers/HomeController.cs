@@ -7,7 +7,6 @@ namespace WorldKitchen.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
@@ -16,19 +15,88 @@ public class HomeController : Controller
     {
         return View();
     }
-    [Route("Privacy")]  // To remove /Home/Privacy
-    public IActionResult Privacy()
+
+    public IActionResult France()
     {
-        return View();
+
+
+        ViewData["Title"] = "Privacy Policy";
+        // Url redirection
+        var country = ("france");
+        var path = Request.Path.ToString().ToLower();
+
+        if (path.EndsWith(country) || path.EndsWith(country + "/"))
+        {
+
+            return View();
+        }
+
+        var dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
+        var dishArray = dishies.Split(',');
+        for (int i = 0; i < dishArray.Length; i++)
+        {
+            var currentDish = dishArray[i];
+            var urlDishies = $"{country}/{currentDish}".ToLower();
+
+            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
+            {
+                return View($"{country}/{currentDish}");
+            }
+        }
+        return View("Errors");
     }
 
 
-    // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    // [Route("Errors")]
-    // public IActionResult Error()
-    // {
-    //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    // }
+    public IActionResult Armenia()
+    {
+        var country = ("armenia");
+        var path = Request.Path.ToString().ToLower();
+
+        if (path.EndsWith(country) || path.EndsWith(country + "/"))
+        {
+            return View();
+        }
+
+        var dishies = "hachisparmentier,pomme,cactus"; //Put the dishies you have
+        var dishArray = dishies.Split(',');
+        for (int i = 0; i < dishArray.Length; i++)
+        {
+            var currentDish = dishArray[i];
+            var urlDishies = $"{country}/{currentDish}".ToLower();
+
+            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
+            {
+                return View($"{country}/{currentDish}");
+            }
+        }
+        return View("Errors");
+    }
+
+    public IActionResult Egypt()
+    {
+        var country = ("egypt");
+        var path = Request.Path.ToString().ToLower();
+
+        if (path.EndsWith(country) || path.EndsWith(country + "/"))
+        {
+            return View();
+        }
+
+        var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
+        var dishArray = dishies.Split(',');
+        for (int i = 0; i < dishArray.Length; i++)
+        {
+            var currentDish = dishArray[i];
+            var urlDishies = $"{country}/{currentDish}".ToLower();
+
+            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
+            {
+                return View($"{country}/{currentDish}");
+            }
+        }
+        return View("Errors");
+    }
+
     [Route("error/404")]  // To remove /Home/Privacy
     public IActionResult Errors()
     {

@@ -26,24 +26,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen
 build_property._RazorSourceGeneratorDebug = 
 
-[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Armenia.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9Bcm1lbmlhLmNzaHRtbA==
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Armenia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Bcm1lbmlhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Egypt.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9FZ3lwdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/France.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9GcmFuY2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/France/HachisParmentier.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9GcmFuY2UvSGFjaGlzUGFybWVudGllci5jc2h0bWw=
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Egypt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FZ3lwdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Errors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/France.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GcmFuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/france/hachisparmentier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9mcmFuY2UvaGFjaGlzcGFybWVudGllci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Index.cshtml]

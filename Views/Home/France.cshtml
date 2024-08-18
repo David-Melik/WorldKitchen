@@ -1,0 +1,14 @@
+@model CountryViewModel
+@{
+        Layout = "/Views/Shared/_LayoutCountry.cshtml";
+        var Model = new CountryViewModel
+        {
+            Country = "France",
+            CustomMessage = "This is a sample message."
+        };
+}
+
+<h1>@Model.Country</h1>
+
+<p>It is @Model.CustomMessage</p>
+
