@@ -19,8 +19,10 @@ public class HomeController : Controller
     public IActionResult France()
     {
 
+        //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        // }
 
-        ViewData["Title"] = "Privacy Policy";
+        //ViewData["Title"] = "Privacy Policy";
         // Url redirection
         var country = ("france");
         var path = Request.Path.ToString().ToLower();
@@ -28,7 +30,7 @@ public class HomeController : Controller
         if (path.EndsWith(country) || path.EndsWith(country + "/"))
         {
 
-            return View();
+            return View(new CountryViewModel { Country = "HEY" });
         }
 
         var dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
