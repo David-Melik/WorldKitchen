@@ -22,6 +22,7 @@ public class HomeController : Controller
         return View();
     }
 
+
     // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     // [Route("Errors")]
     // public IActionResult Error()
