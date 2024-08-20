@@ -9,14 +9,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bgDarkBlue border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm customNavbar customNavbar bgDarkBlue border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WorldKitchen</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                            </div>
+                
+              </div>
                             
    
 
@@ -36,7 +33,7 @@
 </div>
 <!-- Button Search-->
 
-<a href="#" onclick="openSearch(); return false;">
+<a href="#" class="fakeSearch"onclick="openSearch(); return false;">
     <div id="searchInput" class="overlay-content">
         <form class="searchBar" onsubmit="return false;">
             <!-- Input field -->

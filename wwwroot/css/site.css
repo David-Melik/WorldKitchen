@@ -40,6 +40,9 @@ a {
 .bgDarkBlue {
   background-color: #22577a;
 }
+.customNavbar {
+  flex-wrap: initial;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -117,16 +120,16 @@ button.accept-policy {
 
 .searchTerm {
   height: 50px;
-  width: 60%;
+  width: 75%;
   border: 3px solid #38a3a5;
   border-right: 0px;
   padding: 5px 15px 5px 15px;
 
-  font-size: 17px;
   border-radius: 25px 0px 0px 25px;
   outline: none;
   color: #9dbfaf;
   background: white;
+  font-size: var(--bs-body-font-size);
 }
 
 .searchTerm:focus {
@@ -135,12 +138,18 @@ button.accept-policy {
 
 .searchButton {
   /*width: 10%;*/
-  min-width: 50px;
+  /*min-width: 50px;*/
+
+  max-width: 50px;
+  @media (max-width: 576px) {
+    max-width: 25%;
+    min-width: 30px;
+  }
   border: 3px solid #38a3a5;
   border-left: 0px;
   background: white;
   color: #22577a;
-  padding: 5px 15px 5px 15px;
+  /*padding: 5px 5px 5px 5px;*/
   border-radius: 0px 25px 25px 0px;
   cursor: pointer;
   font-size: 20px;
@@ -154,8 +163,15 @@ button.accept-policy {
 .desactivateSearch {
   display: none;
 }
+.fakeSearch {
+  width: 100%;
+  @media (max-width: 576px) {
+    max-width: 50%;
+  }
+}
+/*
 #searchInput {
-  width: 180px;
+  width: 200px;
 
   @media (min-width: 820px) {
     width: 400px;
@@ -164,9 +180,11 @@ button.accept-policy {
     width: 600px;
   }
 }
+*/
 .searchBar {
   display: flex;
   justify-content: center;
+  margin: 5px 0px 5px 0px;
 }
 
 .svgSearch {

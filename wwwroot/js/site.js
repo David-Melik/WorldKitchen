@@ -18,6 +18,6 @@ function openSearch() {
 function closeSearch() {
   document.getElementById("myOverlay").style.display = "none";
   // Disable the full screen
-  document.getElementById("searchInput").style.display = "flex";
+  document.getElementById("searchInput").style.display = "block";
   // Reappear the fake search
 }
