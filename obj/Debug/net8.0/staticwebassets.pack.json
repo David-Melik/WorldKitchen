@@ -1,16 +1,16 @@
 {
   "Files": [
     {
-      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/scopedcss/projectbundle/WorldKitchen.bundle.scp.css",
-      "PackagePath": "staticwebassets/WorldKitchen.bundle.scp.css"
-    },
-    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/icons8-search.svg",
+      "PackagePath": "staticwebassets/icons8-search.svg"
     },
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/js/site.js",

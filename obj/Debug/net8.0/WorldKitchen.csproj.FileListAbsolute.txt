@@ -20,9 +20,7 @@
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WorldKitchen.props
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WorldKitchen.props
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/staticwebassets.pack.json
-/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/scopedcss/bundle/WorldKitchen.styles.css
-/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/scopedcss/projectbundle/WorldKitchen.bundle.scp.css
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/WorldKitchen.dll
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/refint/WorldKitchen.dll
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/WorldKitchen.pdb
@@ -275,3 +273,4 @@
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/WorldKitchen.csproj.AssemblyReference.cache
 /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/WorldKitchen.csproj.CopyComplete
+/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/Debug/net8.0/WorldKitchen.sourcelink.json
