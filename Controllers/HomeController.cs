@@ -6,6 +6,32 @@ namespace WorldKitchen.Controllers;
 
 public class HomeController : Controller
 {
+
+
+    // Function
+    public IActionResult checkUrl(string dishies, string country, string path)
+    {
+        if (path.EndsWith(country) || path.EndsWith(country + "/"))
+        {
+            return View(country);
+        }
+        var dishArray = dishies.Split(',');
+
+        for (int i = 0; i < dishArray.Length; i++)
+        {
+            var currentDish = dishArray[i];
+            var urlDishies = $"{country}/{currentDish}".ToLower();
+
+            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
+            {
+                return View(urlDishies);
+            }
+        }
+
+        return View("Errors");
+    }
+
+    // EndFunction
     private readonly ILogger<HomeController> _logger;
     public HomeController(ILogger<HomeController> logger)
     {
@@ -14,33 +40,16 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         return View();
+
     }
 
     public IActionResult France()
     {
+        string country = ("france");
+        string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
+        string path = Request.Path.ToString().ToLower();
 
-        var country = ("france");
-        var path = Request.Path.ToString().ToLower();
-
-        if (path.EndsWith(country) || path.EndsWith(country + "/"))
-        {
-
-            return View(new CountryViewModel { Country = "HEY" });
-        }
-
-        var dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
-        var dishArray = dishies.Split(',');
-        for (int i = 0; i < dishArray.Length; i++)
-        {
-            var currentDish = dishArray[i];
-            var urlDishies = $"{country}/{currentDish}".ToLower();
-
-            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
-            {
-                return View($"{country}/{currentDish}");
-            }
-        }
-        return View("Errors");
+        return checkUrl(dishies, country, path);
     }
 
 
@@ -48,51 +57,18 @@ public class HomeController : Controller
     {
         var country = ("armenia");
         var path = Request.Path.ToString().ToLower();
+        var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
+        return checkUrl(dishies, country, path);
 
-        if (path.EndsWith(country) || path.EndsWith(country + "/"))
-        {
-            return View(new CountryViewModel { Country = "Armenie" });
-
-        }
-
-        var dishies = "hachisparmentier,pomme,cactus"; //Put the dishies you have
-        var dishArray = dishies.Split(',');
-        for (int i = 0; i < dishArray.Length; i++)
-        {
-            var currentDish = dishArray[i];
-            var urlDishies = $"{country}/{currentDish}".ToLower();
-
-            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
-            {
-                return View($"{country}/{currentDish}");
-            }
-        }
-        return View("Errors");
     }
 
     public IActionResult Egypt()
     {
         var country = ("egypt");
         var path = Request.Path.ToString().ToLower();
-
-        if (path.EndsWith(country) || path.EndsWith(country + "/"))
-        {
-            return View();
-        }
-
         var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
-        var dishArray = dishies.Split(',');
-        for (int i = 0; i < dishArray.Length; i++)
-        {
-            var currentDish = dishArray[i];
-            var urlDishies = $"{country}/{currentDish}".ToLower();
+        return checkUrl(dishies, country, path);
 
-            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
-            {
-                return View($"{country}/{currentDish}");
-            }
-        }
-        return View("Errors");
     }
 
     [Route("error/404")]  // To remove /Home/Privacy

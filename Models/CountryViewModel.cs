@@ -1,5 +1,5 @@
 public class CountryViewModel
 {
-    public string Country { get; set; }
+    public string? Country { get; set; }
 }
 
