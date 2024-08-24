@@ -1,5 +1,7 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using WorldKitchen.Data;
 using WorldKitchen.Models;
 
 namespace WorldKitchen.Controllers;
@@ -33,18 +35,31 @@ public class HomeController : Controller
 
     // EndFunction
     private readonly ILogger<HomeController> _logger;
+
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
     public IActionResult Index()
     {
+        bool hasCountryData = true; // Replace this with actual logic
+
+        if (hasCountryData)
+        {
+            // Redirect to the Index action of the CountryController
+            return RedirectToAction("Index", "Country");
+        }
+
         return View();
 
     }
 
     public IActionResult France()
     {
+        // try to put the sql data
+
+
+        // try to put the sql data
         string country = ("france");
         string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
         string path = Request.Path.ToString().ToLower();

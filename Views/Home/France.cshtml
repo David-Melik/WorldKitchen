@@ -1,21 +1,10 @@
-@model WorldKitchen.Models.DatabaseWorldKitchenCountry
 
 @{
+    ViewData["Title"] = "Country Details";
     Layout = "/Views/Shared/_LayoutCountry.cshtml";
 }
 
-@if (Model != null)
-{
-    <h1>@Model.Description</h1>
-    <h2>@Model.Country</h2>
-    <img src="@Model.Flag" alt="Flag" />
-    <img src="@Model.Map" alt="Map" />
-}
-else
-{
-    <p>No data available.</p>
-}
-<h2>France</h2>
 
-
+    <h4>Details</h4>
+   
 

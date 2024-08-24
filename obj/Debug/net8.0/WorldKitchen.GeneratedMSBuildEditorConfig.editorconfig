@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen
 build_property._RazorSourceGeneratorDebug = 
 
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Armenia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Bcm1lbmlhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
