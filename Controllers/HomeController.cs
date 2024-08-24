@@ -49,6 +49,10 @@ public class HomeController : Controller
     {
         return RedirectToAction("Index", "Country");
     }
+    public IActionResult Dishies()
+    {
+        return RedirectToAction("Index", "Dishies");
+    }
 
     public IActionResult France()
     {

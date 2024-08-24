@@ -18,6 +18,7 @@ namespace WorldKitchen.Models
         public string? Svg2 { get; set; }
         public string? Svg3 { get; set; }
         public bool Allergen { get; set; }
+        public string? AllergnList { get; set; }
         public string? IngredientList { get; set; }
         public string? StepList { get; set; }
         public string? Nutrition { get; set; }
