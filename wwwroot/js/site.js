@@ -1,23 +1,28 @@
-﻿// Please see documentation at
-// https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web
-// assets.
+﻿var isClicked = localStorage.getItem("isClicked") === "true";
 
-// Write your JavaScript code.
 function openSearch() {
   document.getElementById("searchInput").style.display = "none";
-  // Make the fake search desapear
   document.getElementById("myOverlay").style.display = "block";
-  // Appear the fullscreen
-
   var inputField = document.getElementById("focusSearch");
-  inputField.disabled = false; // Make the input field enabled
-  inputField.focus();          // Focus on the input field
+  inputField.disabled = false;
+  inputField.focus();
+  isClicked = true; // Set the variable to true
+  localStorage.setItem("isClicked",
+                       isClicked); // Store the value in localStorage
 }
 
 function closeSearch() {
-  document.getElementById("myOverlay").style.display = "none";
-  // Disable the full screen
   document.getElementById("searchInput").style.display = "block";
-  // Reappear the fake search
+  document.getElementById("myOverlay").style.display = "none";
+  isClicked = false; // Reset the variable to false
+  localStorage.setItem("isClicked",
+                       isClicked); // Store the updated value in localStorage
 }
+
+// Function to check if isClicked is true on page load and open the overlay if
+// needed
+window.onload = function() {
+  if (isClicked) {
+    openSearch();
+  }
+};

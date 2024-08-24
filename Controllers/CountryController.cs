@@ -31,8 +31,9 @@ namespace WorldKitchen.Controllers
                 countries = countries.Where(n => n.Country.Contains(searchString) || n.Description.Contains(searchString));
             }
 
-            return View(countries);
+            return View(await countries.ToListAsync());
         }
+
         //--------
 
         // GET: Country/Details/5
@@ -58,6 +59,7 @@ namespace WorldKitchen.Controllers
         {
             return View();
         }
+
 
         // POST: Country/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
