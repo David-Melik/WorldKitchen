@@ -42,16 +42,12 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-        bool hasCountryData = true; // Replace this with actual logic
-
-        if (hasCountryData)
-        {
-            // Redirect to the Index action of the CountryController
-            return RedirectToAction("Index", "Country");
-        }
 
         return View();
-
+    }
+    public IActionResult Country()
+    {
+        return RedirectToAction("Index", "Country");
     }
 
     public IActionResult France()
