@@ -12,18 +12,28 @@ namespace WorldKitchen.Controllers
 {
     public class CountryController : Controller
     {
+
+
         private readonly ApplicationDbContext _context;
 
         public CountryController(ApplicationDbContext context)
         {
             _context = context;
         }
-
-        // GET: Country
-        public async Task<IActionResult> Index()
+        //--------
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Country.ToListAsync());
+            var countries = from m in _context.Country
+                            select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                countries = countries.Where(n => n.Country.Contains(searchString) || n.Description.Contains(searchString));
+            }
+
+            return View(countries);
         }
+        //--------
 
         // GET: Country/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -153,5 +163,11 @@ namespace WorldKitchen.Controllers
         {
             return _context.Country.Any(e => e.Id == id);
         }
+
+
+
+
+
+
     }
 }

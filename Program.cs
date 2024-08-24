@@ -1,5 +1,5 @@
-using Microsoft.EntityFrameworkCore; //For Sqlite
-using WorldKitchen.Data; //For he see the model of Sqlite database
+using Microsoft.EntityFrameworkCore;
+using WorldKitchen.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,14 +21,13 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseStatusCodePagesWithRedirects("/error/{0}");
+//app.UseStatusCodePagesWithRedirects("/error/{0}");
 app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
+ pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
