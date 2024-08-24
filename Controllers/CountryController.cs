@@ -21,7 +21,18 @@ namespace WorldKitchen.Controllers
             _context = context;
         }
         //--------
+        public async Task<IActionResult> Index(string searchString)
+        {
+            var countries = from m in _context.Country
+                            select m;
 
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                countries = countries.Where(n => n.Country.Contains(searchString) || n.Description.Contains(searchString));
+            }
+
+            return View(await countries.ToListAsync());
+        }
 
         //--------
 
