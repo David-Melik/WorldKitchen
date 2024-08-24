@@ -9,7 +9,9 @@ namespace WorldKitchen.Data
         {
         }
 
-        public DbSet<DatabaseWorldKitchen> Country { get; set; }
+        public DbSet<DatabaseWorldKitchenCountry> Country { get; set; }
+        public DbSet<DatabaseWorldKitchenDishies> Dishies { get; set; }
+
     }
 }
 
