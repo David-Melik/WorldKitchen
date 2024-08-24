@@ -1,3 +1,5 @@
+@model IEnumerable<WorldKitchen.Models.DatabaseWorldKitchenDishies>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,6 +87,7 @@ button.accept-policy {
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+ @Html.Partial("_SearchBar")
             @RenderBody()
         </main>
     </div>
