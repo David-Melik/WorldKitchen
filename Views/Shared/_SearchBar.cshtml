@@ -1,0 +1,154 @@
+@* _SearchBar.cshtml *@
+@model IEnumerable<WorldKitchen.Models.DatabaseWorldKitchenDishies>
+
+    <form class="d-flex" asp-controller="Search">
+                <input name="searchString" class="form-control me-1" type="search" placeholder="Search" aria-label="Search" value="@ViewData["CurrentFilter"]">
+                <button class="btn btn-dark" type="submit">Search by name</button>
+            </form>
+<!-- Search Bar when activated -->
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+
+  <div class="overlay-content">
+    <form id="searchForm" class="searchBar" asp-action="Index" asp-controller="search">
+      <input name="searchString" type="text" id="focusSearch" class="searchTerm" placeholder="What are you looking for?" value="@ViewData["CurrentFilter"]">
+      <button type="submit" class="searchButton">
+        <svg class="svgSearch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+          <path d="M 20.5 6 C 12.515556 6 6 12.515562 6 20.5 C 6 28.484438 12.515556 35 20.5 35 C 23.773158 35 26.788919 33.893018 29.220703 32.050781 L 38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938 L 32.050781 29.220703 C 33.893017 26.788918 35 23.773156 35 20.5 C 35 12.515562 28.484444 6 20.5 6 z M 20.5 10 C 26.322685 10 31 14.677319 31 20.5 C 31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531 C 25.824103 29.912403 23.29771 31 20.5 31 C 14.677315 31 10 26.322681 10 20.5 C 10 14.677319 14.677315 10 20.5 10 z"/>
+        </svg>
+      </button>
+    </form>
+    <div>
+      
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Traduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VoiceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePreview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Video)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Svg1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Svg2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Svg3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Allergen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllergnList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IngredientList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StepList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nutrition)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Traduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoiceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePreview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Video)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Svg1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Svg2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Svg3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Allergen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllergnList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IngredientList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StepList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nutrition)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>    </div> <!-- Container for search results -->
+  </div>
+</div>
+<!-- Button Search-->
+<a href="#" class="fakeSearch" onclick="openSearch(); return false;">
+    <div id="searchInput" class="overlay-content">
+        <form class="searchBar" onsubmit="return false;">
+            <input type="text" class="searchTerm" placeholder="What are you looking for?" name="search" readonly="readonly">
+            <button class="searchButton" type="button" onclick="openSearch();">
+                <svg class="svgSearch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                    <path d="M 20.5 6 C 12.515556 6 6 12.515562 6 20.5 C 6 28.484438 12.515556 35 20.5 35 C 23.773158 35 26.788919 33.893018 29.220703 32.050781 L 38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938 L 32.050781 29.220703 C 33.893017 26.788918 35 23.773156 35 20.5 C 35 12.515562 28.484444 6 20.5 6 z M 20.5 10 C 26.322685 10 31 14.677319 31 20.5 C 31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531 C 25.824103 29.912403 23.29771 31 20.5 31 C 14.677315 31 10 26.322681 10 20.5 C 10 14.677319 14.677315 10 20.5 10 z"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</a>
+
+
+<!-- End Search Bar -->
+
+

@@ -1,0 +1,120 @@
+@model IEnumerable<WorldKitchen.Models.DatabaseWorldKitchenDishies>
+
+@{
+    ViewData["Title"] = "Index";
+     Layout = "/Views/Shared/_LayoutDishies.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Traduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VoiceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePreview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Video)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Svg1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Svg2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Svg3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Allergen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllergnList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IngredientList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StepList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nutrition)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Traduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoiceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePreview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Video)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Svg1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Svg2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Svg3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Allergen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllergnList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IngredientList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StepList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nutrition)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
