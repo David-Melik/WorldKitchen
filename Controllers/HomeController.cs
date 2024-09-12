@@ -43,7 +43,12 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-        return View();
+        var frenchDishes = _context.Dishies
+                                    .Where(d => d.Country == "France") // Filter for France
+                                    .ToList(); // Convert to list for use in the view
+
+        // Pass the list of French dishes to the view
+        return View(frenchDishes);
     }
     public IActionResult Country()
     {
@@ -53,6 +58,11 @@ public class HomeController : Controller
     {
         return RedirectToAction("Index", "Dishies");
     }
+    public IActionResult Search()
+    {
+        return RedirectToAction("Index", "search");
+    }
+
     private readonly ApplicationDbContext _context;
 
     // Constructor to initialize DbContext
