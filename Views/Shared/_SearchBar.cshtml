@@ -7,7 +7,7 @@
   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
 
   <div class="overlay-content">
-    <form id="searchForm" class="searchBar" asp-controller="search" asp-action="Index">
+    <form id="searchForm" class="searchBar" asp-controller="dishies" asp-action="Index">
       <input name="searchString" type="text" id="focusSearch" class="searchTerm" placeholder="What are you looking for?" value="@ViewData["CurrentFilter"]">
       <button type="submit" class="searchButton">
         <svg class="svgSearch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">

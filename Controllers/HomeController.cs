@@ -34,6 +34,8 @@ public class HomeController : Controller
     }
 
     // EndFunction
+    private readonly ApplicationDbContext _context;
+
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
