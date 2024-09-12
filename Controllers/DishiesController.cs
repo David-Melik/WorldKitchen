@@ -19,19 +19,11 @@ namespace WorldKitchen.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(string searchString)
+        // GET: Dishies
+        public async Task<IActionResult> Index()
         {
-            var dishies = from m in _context.Dishies
-                          select m;
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                dishies = dishies.Where(n => n.Country.Contains(searchString) || n.Name.Contains(searchString));
-            }
-
-            return View(await dishies.ToListAsync());
+            return View(await _context.Dishies.ToListAsync());
         }
-
 
         // GET: Dishies/Details/5
         public async Task<IActionResult> Details(int? id)
