@@ -94,7 +94,7 @@ button.accept-policy {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(34, 87, 122, 0.9);
+  background-color: rgba(34, 87, 122);
 }
 
 .overlay-content {
