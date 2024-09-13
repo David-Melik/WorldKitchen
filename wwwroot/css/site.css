@@ -28,9 +28,13 @@ body {
 }
 
 a.navbar-brand {
+  color: white;
   white-space: normal;
   text-align: center;
   word-break: break-all;
+}
+.nav-item {
+  color: white;
 }
 
 a {
@@ -164,6 +168,8 @@ button.accept-policy {
   display: none;
 }
 .fakeSearch {
+  display: contents;
+  max-width: 250px;
   width: 100%;
   @media (max-width: 576px) {
     max-width: 50%;

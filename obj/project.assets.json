@@ -8174,11 +8174,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/WorldKitchen.csproj",
+      "projectUniqueName": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/WorldKitchen.csproj",
       "projectName": "WorldKitchen",
-      "projectPath": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/WorldKitchen.csproj",
+      "projectPath": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/WorldKitchen.csproj",
       "packagesPath": "/home/davidlinux/.nuget/packages/",
-      "outputPath": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/",
+      "outputPath": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/davidlinux/.nuget/NuGet/NuGet.Config"
