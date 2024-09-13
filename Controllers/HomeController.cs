@@ -34,6 +34,8 @@ public class HomeController : Controller
     }
 
     // EndFunction
+    private readonly ApplicationDbContext _context;
+
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
@@ -43,7 +45,14 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-        return View();
+        var frenchDishes = _context.Dishies
+                                    .Where(d => d.Country == "France") // Filter for France
+                                    .ToList(); // Convert to list for use in the view
+
+        // Pass the list of French dishes to the view
+        return View(frenchDishes);
+
+
     }
     public IActionResult Country()
     {
@@ -53,34 +62,18 @@ public class HomeController : Controller
     {
         return RedirectToAction("Index", "Dishies");
     }
-    private readonly ApplicationDbContext _context;
-
-    // Constructor to initialize DbContext
-
-
-    // Action to display dishes related to France
     public IActionResult France()
     {
-        // Fetch dishes related to France
-        var frenchDishes = _context.Dishies
-                                   .Where(d => d.Country == "France") // Filter for France
-                                   .ToList(); // Convert to list for use in the view
+        // try to put the sql data
 
-        // Pass the list of French dishes to the view
-        return View(frenchDishes);
+
+        // try to put the sql data
+        string country = ("france");
+        string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
+        string path = Request.Path.ToString().ToLower();
+
+        return checkUrl(dishies, country, path);
     }
-    //public IActionResult France()
-    //{
-    //    // try to put the sql data
-
-
-    //    // try to put the sql data
-    //    string country = ("france");
-    //    string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
-    //    string path = Request.Path.ToString().ToLower();
-
-    //    return checkUrl(dishies, country, path);
-    //}
 
 
     public IActionResult Armenia()
