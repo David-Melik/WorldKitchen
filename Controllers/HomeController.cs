@@ -62,6 +62,15 @@ public class HomeController : Controller
     {
         return RedirectToAction("Index", "Dishies");
     }
+    public IActionResult Search()
+    {
+        return RedirectToAction("Index", "Search");
+    }
+
+    // Constructor to initialize DbContext
+
+
+    // Action to display dishes related to France
     public IActionResult France()
     {
         // try to put the sql data

@@ -18,23 +18,16 @@ namespace WorldKitchen.Controllers
             _context = context;
         }
 
-        [HttpGet]
         public async Task<IActionResult> Index(string searchString)
         {
-            // Start with the LINQ query to select from the Dishies table
-            var dishies = from d in _context.Dishies
-                          select d;
+            var dishies = from m in _context.Dishies
+                          select m;
 
-            // Apply the search filter to both Country and Name fields in the Dishies table
             if (!string.IsNullOrEmpty(searchString))
             {
-                dishies = dishies.Where(d => d.Country.Contains(searchString) || d.Name.Contains(searchString));
+                searchString = searchString.ToLower();
+                dishies = dishies.Where(n => n.Country.ToLower().Contains(searchString) || n.Name.ToLower().Contains(searchString));
             }
-
-            // Pass the current filter to the ViewData dictionary
-            ViewData["CurrentFilter"] = searchString;
-
-            // Return the view with the list of filtered results
             return View(await dishies.ToListAsync());
         }
     }
