@@ -21,7 +21,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-//app.UseStatusCodePagesWithRedirects("/error/{0}");
+app.UseStatusCodePagesWithRedirects("/error/{0}");
 app.UseRouting();
 
 app.UseAuthorization();

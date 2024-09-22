@@ -40,6 +40,10 @@ a.navbar-brand {
 a {
   color: #0077cc;
 }
+p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
 
 .bgDarkBlue {
   background-color: #22577a;
@@ -205,4 +209,67 @@ button.accept-policy {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+
+/*home page*/
+.bigContainer {
+  width: 100%;
+  text-align: center;
+}
+.aboutUs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.aboutUsText {
+  margin: auto;
+}
+.imageOfUs {
+  width: 50%;
+  max-width: 250px;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    max-width: 150px;
+  }
+}
+.showCountry {
+  background-color: rgba(34, 87, 122);
+  width: 100%;
+  padding: 32px 0px 32px 0px;
+}
+.flagCountry {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.flagCountryElement {
+  margin: 0px 20px 0px 20px;
+}
+.greenLime {
+  color: limegreen; /* need to change here*/
+}
+.lightGreen {
+  color: lime;
+}
+/*footer*/
+footer {
+  min-height: 150px;
+  background: black;
+  align-content: end;
+  text-align: center;
+}
+.footerContainerText {
+  color: lime;
+  text-align: center;
+  /* add the wrap text brake*/
+}
+.footerLogo {
+  width: 25%;
+  max-width: 90px;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    max-width: 80px;
+  }
 }

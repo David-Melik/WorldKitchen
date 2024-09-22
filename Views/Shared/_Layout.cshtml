@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,19 +19,21 @@
                 </a>
                  
             </div> 
- @Html.Partial("_SearchBar")
+            @{
+            //Html.Partial("_SearchBar")
+            }
 
 
        </nav>
     </header>
-    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
+      <img class="footerLogo" src="/media/footerLogo.png">
+      
+        <div class="footerContainerText">
             &copy; 2024 - WorldKitchen - 
             <a asp-area="" asp-controller="home" asp-action="index">Home</a> - 
             <a asp-area="" asp-controller="country" asp-action="index">Country</a> - 

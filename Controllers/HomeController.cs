@@ -15,6 +15,10 @@ public class HomeController : Controller
     {
         if (path.EndsWith(country) || path.EndsWith(country + "/"))
         {
+            // try to put the sql data
+            // var countryDishes = _context.Country
+            //                              .Where(d => d.Country == "France") // Filter for France
+            //                              .ToList(); // Convert to list for use in the view
             return View(country);
         }
         var dishArray = dishies.Split(',');
@@ -51,8 +55,6 @@ public class HomeController : Controller
 
         // Pass the list of French dishes to the view
         return View(frenchDishes);
-
-
     }
     public IActionResult Country()
     {
@@ -73,8 +75,6 @@ public class HomeController : Controller
     // Action to display dishes related to France
     public IActionResult France()
     {
-        // try to put the sql data
-
 
         // try to put the sql data
         string country = ("france");

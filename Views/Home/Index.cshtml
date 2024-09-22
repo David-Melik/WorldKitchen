@@ -2,8 +2,31 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-   @Html.Partial("_SearchBar")
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="bigContainer">
+  <!-- First part -->
+  <h1 class="display-4">Welcome to Worldkitchen</h1>
+  <p class = "blockquote">Made by 3 friends</p>
+  <div class="aboutUs">
+   <p class="aboutUsText">Passionate about food</p>
+   <img class="imageOfUs" src="/media/imageOfUs.png">
+  </div>
+
+  <div class ="showCountry">
+    <h2 class="display-7 greenLime">Choose by Country</h2>  
+    <p class="lightGreen"> First choose a country you want to learn a dish !</p>
+    <div class="flagCountry">
+      <div>
+      <p class="flagCountryElement lightGreen">France</p>
+      <p></p>
+    </div>  
+    <div>
+      <p class="flagCountryElement lightGreen">Algerie</p>
+      <p></p>
+    </div>
+    <div>
+      <p class="flagCountryElement lightGreen">Armenia</p>
+      <p></p>
+    </div>
+    </div>
+  </div>
 </div>
