@@ -9,17 +9,30 @@ namespace WorldKitchen.Controllers;
 public class HomeController : Controller
 {
 
+    // EndFunction
+    private readonly ApplicationDbContext _context;
 
+    private readonly ILogger<HomeController> _logger;
+
+    public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+    {
+        _logger = logger;
+        _context = context;
+    }
     // Function
     public IActionResult checkUrl(string dishies, string country, string path)
     {
         if (path.EndsWith(country) || path.EndsWith(country + "/"))
         {
-            // try to put the sql data
-            // var countryDishes = _context.Country
+            // var countryDishies = _context.Dishies
             //                              .Where(d => d.Country == "France") // Filter for France
             //                              .ToList(); // Convert to list for use in the view
-            return View(country);
+
+            var countryInfo = _context.Country
+                                        .Where(d => d.Country == "France") // Filter for France
+                                        .ToList(); // Convert to list for use in the view
+
+            return View(countryInfo, countryDishies);
         }
         var dishArray = dishies.Split(',');
 
@@ -37,16 +50,6 @@ public class HomeController : Controller
         return View("Errors");
     }
 
-    // EndFunction
-    private readonly ApplicationDbContext _context;
-
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
-    {
-        _logger = logger;
-        _context = context;
-    }
     public IActionResult Index()
     {
         var frenchDishes = _context.Dishies
@@ -76,7 +79,8 @@ public class HomeController : Controller
     public IActionResult France()
     {
 
-        // try to put the sql data
+
+
         string country = ("france");
         string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
         string path = Request.Path.ToString().ToLower();

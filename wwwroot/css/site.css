@@ -254,7 +254,7 @@ button.accept-policy {
 }
 /*footer*/
 footer {
-  min-height: 150px;
+  padding-top: 50px;
   background: black;
   align-content: end;
   text-align: center;

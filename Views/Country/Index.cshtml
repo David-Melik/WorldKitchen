@@ -2,12 +2,11 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "/Views/Shared/_LayoutCountry.cshtml";
 }
+ <div class="container">
+        <main role="main" class="pb-3">
 
-<h1>Index</h1>
-
-<!-- Search Bar when activated -->
+<h1>Country Index</h1>
 
 
     <form class="d-flex" asp-action="Index" asp-controller="Country">
@@ -15,14 +14,6 @@
                 <button class="btn btn-dark" type="submit">Search by name</button>
             </form>
 
-
-
-            <!-- end search -->
-             
-<!-- Search Bar when activated (open help to js) -->
-
-
-            <!-- cool search -->
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -68,3 +59,5 @@
 }
     </tbody>
 </table>
+        </main>
+ </div>

@@ -30,52 +30,6 @@
        </nav>
     </header>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Flag)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Map)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Flag)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Map)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-
 
 
 
@@ -84,12 +38,17 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - WorldKitcdsfsdfhen - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+<footer class="border-top footer text-muted">
+      <img class="footerLogo" src="/media/footerLogo.png">
+      
+        <div class="footerContainerText">
+            &copy; 2024 - WorldKitchen - 
+            <a asp-area="" asp-controller="home" asp-action="index">Home</a> - 
+            <a asp-area="" asp-controller="country" asp-action="index">Country</a> - 
+            <a asp-area="" asp-controller="dishies" asp-action="index">Dishies</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
