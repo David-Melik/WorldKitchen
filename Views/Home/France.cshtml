@@ -1,53 +1,49 @@
-@model IEnumerable<WorldKitchen.Models.DatabaseWorldKitchenCountry>
-
-
+@model WorldKitchen.Models.BigViewModel
 @{
-    ViewData["Title"] = "Country Details";
+    ViewData["Title"] = "Country and Dishes Details";
     Layout = "/Views/Shared/_LayoutCountry.cshtml";
 }
-
-
-    <h1>France page view</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Flag)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Map)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Flag)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Map)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+<!-- Displaying Country Table -->
+@if (Model.CountryTable != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Country Name</th>
+                <!-- Other table headers -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in Model.CountryTable)
+            {
+                <tr>
+                    <td>@d.Country</td> <!-- Assuming Country has a Name property -->
+                    <!-- Other data fields -->
+                </tr>
+            }
+        </tbody>
+    </table>
 }
-    </tbody>
-</table>
- 
+
+<!-- Displaying Dishies Table -->
+@if (Model.DishiesTable != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Dish Name</th>
+                <!-- Other table headers -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model.DishiesTable)
+            {
+                <tr>
+                    <td>@e.Name</td> <!-- Assuming Dishies has a Name property -->
+                    <!-- Other data fields -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

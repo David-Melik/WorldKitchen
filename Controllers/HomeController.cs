@@ -3,13 +3,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WorldKitchen.Data;
 using WorldKitchen.Models;
+using System.Data;
+using System.Net;
+using WorldKitchen.Models;
 
 namespace WorldKitchen.Controllers;
 
 public class HomeController : Controller
 {
 
-    // EndFunction
+
     private readonly ApplicationDbContext _context;
 
     private readonly ILogger<HomeController> _logger;
@@ -19,21 +22,31 @@ public class HomeController : Controller
         _logger = logger;
         _context = context;
     }
+
+
+
+
     // Function
     public IActionResult checkUrl(string dishies, string country, string path)
     {
         if (path.EndsWith(country) || path.EndsWith(country + "/"))
         {
-            // var countryDishies = _context.Dishies
-            //                              .Where(d => d.Country == "France") // Filter for France
-            //                              .ToList(); // Convert to list for use in the view
+            var tables = new BigViewModel
+            {
+                // Filter CountryTable by the 'Country' field (which contains country names like 'France')
+                CountryTable = _context.Country
+                .Where(c => c.Country.Equals("France"))
+                .ToList(),
 
-            var countryInfo = _context.Country
-                                        .Where(d => d.Country == "France") // Filter for France
-                                        .ToList(); // Convert to list for use in the view
-
-            return View(countryInfo, countryDishies);
+                // Filter DishiesTable by the 'Country' field (assuming 'Country' is the field in Dishies as well)
+                DishiesTable = _context.Dishies
+                .Where(d => d.Country.Equals("France"))
+                .ToList()
+            };
+            return View(tables);
         }
+
+        // The rest of your logic...
         var dishArray = dishies.Split(',');
 
         for (int i = 0; i < dishArray.Length; i++)
@@ -43,7 +56,7 @@ public class HomeController : Controller
 
             if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
             {
-                return View(urlDishies);
+                return View("Dishes", urlDishies); // Update to your dishes view if needed
             }
         }
 
@@ -79,13 +92,14 @@ public class HomeController : Controller
     public IActionResult France()
     {
 
-
-
         string country = ("france");
         string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
         string path = Request.Path.ToString().ToLower();
 
         return checkUrl(dishies, country, path);
+        //var countries = _context.Country.ToList(); // Or whatever logic you use to get the list
+        //return View(countries); // Ensure the view receives an IEnumerable<DatabaseWorldKitchenCountry>
+
     }
 
 
