@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldKitchen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03d538c333ff6ca4cd7466cf78e577b3f9e657a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f70d8f0f23f4858d4f201cac2d1c5334b7c4d5d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldKitchen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldKitchen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

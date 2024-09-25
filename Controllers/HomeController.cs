@@ -78,7 +78,23 @@ public class HomeController : Controller
 
             if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
             {
-                return View("Dishes", urlDishies); // Update to your dishes view if needed
+                string capatalizeCountry = CapitalizeFirstLetter(country); //to be ready to use for combine the two model
+
+
+                var tables = new BigViewModel
+                {
+
+                    // Filter CountryTable by the 'Country' field (which contains country names like 'France')
+                    CountryTable = _context.Country
+                  .Where(c => c.Country.Equals(capatalizeCountry))
+                  .ToList(),
+
+                    // Filter DishiesTable by the 'Country' field (assuming 'Country' is the field in Dishies as well)
+                    DishiesTable = _context.Dishies
+                  .Where(d => d.Country.Equals(capatalizeCountry))
+                  .ToList()
+                };
+                return View(urlDishies, tables); // Update to your dishes view if needed
             }
         }
 
