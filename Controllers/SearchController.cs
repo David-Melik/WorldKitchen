@@ -20,15 +20,19 @@ namespace WorldKitchen.Controllers
 
         public async Task<IActionResult> Index(string searchString)
         {
-            var dishies = from m in _context.Dishies
-                          select m;
 
-            if (!string.IsNullOrEmpty(searchString))
+            // Step 1: Filter and populate the DishiesTable within the BigViewModel
+            var tables = new BigViewModel
             {
-                searchString = searchString.ToLower();
-                dishies = dishies.Where(n => n.Country.ToLower().Contains(searchString) || n.Name.ToLower().Contains(searchString));
-            }
-            return View(await dishies.ToListAsync());
+                DishiesTable = await _context.Dishies
+                    .Where(d => string.IsNullOrEmpty(searchString) ||
+                                 d.Country.ToLower().Contains(searchString.ToLower()) ||
+                                 d.Name.ToLower().Contains(searchString.ToLower()))
+                    .ToListAsync() // Step 2: Execute the query asynchronously
+            };
+
+            // Step 3: Return the View with the ViewModel
+            return View(tables);
         }
     }
 }

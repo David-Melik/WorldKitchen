@@ -1,5 +1,5 @@
 @* _SearchBar.cshtml *@
-@model IEnumerable<WorldKitchen.Models.DatabaseWorldKitchenDishies>
+@model WorldKitchen.Models.BigViewModel
 
 
 <!-- Search Bar when activated -->
@@ -23,56 +23,25 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Traduction)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VoiceName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagePreview)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Video)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Svg1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Svg2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Svg3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Allergen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AllergnList)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IngredientList)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StepList)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nutrition)
-            </th>
-            <th></th>
+           <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Country)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Traduction)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().VoiceName)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().ImagePreview)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Time)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Video)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Svg1)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Svg2)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Svg3)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Allergen)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().AllergnList)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().IngredientList)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().StepList)</th>
+                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Nutrition)</th>        
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.DishiesTable) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -127,7 +96,9 @@
         </tr>
 }
     </tbody>
-</table>    </div> <!-- Container for search results -->
+</table>    
+
+    </div> <!-- Container for search results -->
   </div>
 </div>
 <!-- Button Search-->

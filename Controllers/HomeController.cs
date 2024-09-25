@@ -35,11 +35,22 @@ public class HomeController : Controller
         return char.ToUpper(str[0]) + str.Substring(1).ToLower();
     }
 
-    public IActionResult checkUrl(string dishies, string country, string path)
+    public IActionResult checkUrl(string dishies, string country, string path, bool state)
     {
-        if (path.EndsWith(country) || path.EndsWith(country + "/"))
+        if ((path.EndsWith(country) || path.EndsWith(country + "/")) || state)
         {
-            string capatalizeCountry = CapitalizeFirstLetter(country);
+            if (state)
+            {
+                var tablesAll = new BigViewModel
+                {
+                    CountryTable = _context.Country,
+                    DishiesTable = _context.Dishies
+
+                };
+                return View(tablesAll);
+            }
+
+            string capatalizeCountry = CapitalizeFirstLetter(country); //to be ready to use for combine the two model
 
             var tables = new BigViewModel
             {
@@ -76,12 +87,11 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var frenchDishes = _context.Dishies
-                                    .Where(d => d.Country == "France") // Filter for France
-                                    .ToList(); // Convert to list for use in the view
-
-        // Pass the list of French dishes to the view
-        return View(frenchDishes);
+        string country = ("");
+        string dishies = ""; //Put the dishies you have
+        string path = Request.Path.ToString().ToLower();
+        bool state = true;
+        return checkUrl(dishies, country, path, state);
     }
     public IActionResult Country()
     {
@@ -95,6 +105,15 @@ public class HomeController : Controller
     {
         return RedirectToAction("Index", "Search");
     }
+    [Route("error/404")]  // To remove /Home/Privacy
+    public IActionResult Errors()
+    {
+        string country = ("");
+        string dishies = ""; //Put the dishies you have
+        string path = Request.Path.ToString().ToLower();
+        bool state = true;
+        return checkUrl(dishies, country, path, state);
+    }
 
     // Constructor to initialize DbContext
 
@@ -106,8 +125,8 @@ public class HomeController : Controller
         string country = ("france");
         string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
         string path = Request.Path.ToString().ToLower();
-
-        return checkUrl(dishies, country, path);
+        bool state = false;
+        return checkUrl(dishies, country, path, state);
         //var countries = _context.Country.ToList(); // Or whatever logic you use to get the list
         //return View(countries); // Ensure the view receives an IEnumerable<DatabaseWorldKitchenCountry>
 
@@ -119,7 +138,8 @@ public class HomeController : Controller
         var country = ("armenia");
         var path = Request.Path.ToString().ToLower();
         var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
-        return checkUrl(dishies, country, path);
+        bool state = false;
+        return checkUrl(dishies, country, path, state);
 
     }
 
@@ -128,13 +148,10 @@ public class HomeController : Controller
         var country = ("egypt");
         var path = Request.Path.ToString().ToLower();
         var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
-        return checkUrl(dishies, country, path);
+        bool state = false;
+        return checkUrl(dishies, country, path, state);
 
     }
 
-    [Route("error/404")]  // To remove /Home/Privacy
-    public IActionResult Errors()
-    {
-        return View();
-    }
+
 }
