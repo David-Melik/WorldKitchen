@@ -27,20 +27,31 @@ public class HomeController : Controller
 
 
     // Function
+    public string CapitalizeFirstLetter(string str)
+    {
+        if (string.IsNullOrEmpty(str))
+            return str;
+
+        return char.ToUpper(str[0]) + str.Substring(1).ToLower();
+    }
+
     public IActionResult checkUrl(string dishies, string country, string path)
     {
         if (path.EndsWith(country) || path.EndsWith(country + "/"))
         {
+            string capatalizeCountry = CapitalizeFirstLetter(country);
+
             var tables = new BigViewModel
             {
+
                 // Filter CountryTable by the 'Country' field (which contains country names like 'France')
                 CountryTable = _context.Country
-                .Where(c => c.Country.Equals("France"))
+                .Where(c => c.Country.Equals(capatalizeCountry))
                 .ToList(),
 
                 // Filter DishiesTable by the 'Country' field (assuming 'Country' is the field in Dishies as well)
                 DishiesTable = _context.Dishies
-                .Where(d => d.Country.Equals("France"))
+                .Where(d => d.Country.Equals(capatalizeCountry))
                 .ToList()
             };
             return View(tables);
