@@ -1,3 +1,11 @@
+:root {
+  --darkBlue: #22577a;
+  --blueLightSky: #38a3a5;
+  --middleGreen: #57cc99;
+  --greeLime: #80ed99;
+  --lighestGreen: #c7f9cc;
+}
+
 html {
   font-size: 14px;
 }
@@ -102,7 +110,7 @@ button.accept-policy {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(34, 87, 122);
+  background-color: var(--darkBlue);
 }
 
 .overlay-content {
@@ -234,7 +242,7 @@ button.accept-policy {
   }
 }
 .showCountry {
-  background-color: rgba(34, 87, 122);
+  background-color: var(--darkBlue);
   width: 100%;
   padding: 32px 0px 32px 0px;
 }

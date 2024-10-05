@@ -105,7 +105,7 @@ public class HomeController : Controller
     {
         string country = ("");
         string dishies = ""; //Put the dishies you have
-        string path = Request.Path.ToString().ToLower();
+        string path = "";
         bool state = true;
         return checkUrl(dishies, country, path, state);
     }

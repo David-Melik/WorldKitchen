@@ -13,23 +13,23 @@
    <img class="imageOfUs" src="/media/imageOfUs.png">
   </div>
 
-  <div class ="showCountry">
+
+<div class ="showCountry">
     <h2 class="display-7 greenLime">Choose by Country</h2>  
     <p class="lightGreen"> First choose a country you want to learn a dish !</p>
-    <div class="flagCountry">
-      <div>
-      <p class="flagCountryElement lightGreen">France</p>
-      <p></p>
-    </div>  
-    <div>
-      <p class="flagCountryElement lightGreen">Algerie</p>
-    </div>
-    <div>
-      <p class="flagCountryElement lightGreen">Armenia</p>
-      <p></p>
-    </div>
-    </div>
+                 <div class="flagCountry">
 
-
-
+@if (Model.CountryTable != null)
+{
+            @foreach (var d in Model.CountryTable)
+            {
+                <div>
+                    <p class="flagCountryElement lightGreen">@d.Country</p>
+                    <img class="imageOfUs" src="@d.Flag">
+                    
+                </div>
+            }
+}
+                 </div>
+</div>
 </div>
