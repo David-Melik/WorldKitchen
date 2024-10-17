@@ -2,8 +2,27 @@
   --darkBlue: #22577a;
   --blueLightSky: #38a3a5;
   --middleGreen: #57cc99;
-  --greeLime: #80ed99;
+  --greenLime: #80ed99;
   --lighestGreen: #c7f9cc;
+}
+.darkBlue {
+  color: var(--darkBlue);
+}
+
+.blueLightSky {
+  color: var(--blueLightSky);
+}
+
+.middleGreen {
+  color: var(--middleGreen);
+}
+
+.greenLime {
+  color: var(--greenLime);
+}
+
+.lighestGreen {
+  color: var(--lighestGreen);
 }
 
 html {
@@ -31,10 +50,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 a.navbar-brand {
   color: white;
   white-space: normal;
@@ -52,7 +67,9 @@ p {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
-
+.bold {
+  font-weight: 500;
+}
 .bgDarkBlue {
   background-color: #22577a;
 }
@@ -199,6 +216,13 @@ button.accept-policy {
   }
 }
 */
+
+.logoNav {
+  width: 100px;
+  @media (max-width: 768px) {
+    width: 80px;
+  }
+}
 .searchBar {
   display: flex;
   justify-content: center;
@@ -211,14 +235,6 @@ button.accept-policy {
 }
 /*.searchBar*/
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-}
-
 /*home page*/
 .bigContainer {
   width: 100%;
@@ -228,12 +244,19 @@ button.accept-policy {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-left: 30%;
+  padding-right: 30%;
+  @media (max-width: 900px) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  margin-bottom: 36px;
 }
 .aboutUsText {
   margin: auto;
 }
 .imageOfUs {
-  width: 50%;
+  width: 100%;
   max-width: 250px;
   margin: auto;
 
@@ -241,10 +264,21 @@ button.accept-policy {
     max-width: 150px;
   }
 }
+.showCountryFlag {
+  width: 90px;
+  max-width: 250px;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    max-width: 150px;
+  }
+}
 .showCountry {
   background-color: var(--darkBlue);
   width: 100%;
   padding: 32px 0px 32px 0px;
+  margin-bottom: 36px;
 }
 .flagCountry {
   display: flex;
@@ -254,12 +288,11 @@ button.accept-policy {
 .flagCountryElement {
   margin: 0px 20px 0px 20px;
 }
-.greenLime {
-  color: limegreen; /* need to change here*/
+/*tuto*/
+.showChooseDish {
+  text-align: left;
 }
-.lightGreen {
-  color: lime;
-}
+
 /*footer*/
 footer {
   padding-top: 50px;
@@ -280,4 +313,53 @@ footer {
   @media (max-width: 768px) {
     max-width: 80px;
   }
+}
+/*footer */
+/* Footer Section */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+
+  @media (min-width: 768px) {
+    max-height: 150px;
+  }
+}
+footer {
+  background-color: var(--darkBlue);
+  color: white;
+  /*padding: 20px 20px 0px 20px;*/
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content-img {
+  width: 200px;
+  height: auto;
+  @media (max-width: 768px) {
+    width: 100px;
+  }
+}
+
+.footer-content .footer-logo {
+  /*font-size: 60px;*/
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-content .footer-slogan {
+  /*font-size: 18px;*/
+  font-style: italic;
 }

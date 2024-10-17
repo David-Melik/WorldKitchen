@@ -245,12 +245,28 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/Algeria/dz.svg",
+      "PackagePath": "staticwebassets/media/Algeria/dz.svg"
+    },
+    {
+      "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/Armenia/am.svg",
+      "PackagePath": "staticwebassets/media/Armenia/am.svg"
+    },
+    {
+      "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/France/fr.svg",
+      "PackagePath": "staticwebassets/media/France/fr.svg"
+    },
+    {
       "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/footerLogo.png",
       "PackagePath": "staticwebassets/media/footerLogo.png"
     },
     {
       "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/footerLogo.xcf",
       "PackagePath": "staticwebassets/media/footerLogo.xcf"
+    },
+    {
+      "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/footerLogoOld.png",
+      "PackagePath": "staticwebassets/media/footerLogoOld.png"
     },
     {
       "Id": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/wwwroot/media/imageOfUs.png",
