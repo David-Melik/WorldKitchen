@@ -18,8 +18,8 @@ to cook international dishies 😎</p>
 <div class="mb-3">
 <div class ="showCountry">
     <h2 class="display-7 middleGreen">Choose by Country</h2>  
-    <p class="greenLime"> First choose a country you want to learn a dish !</p>
-                 <div class="flagCountry">
+    <p id="showCountryP" class="greenLime"> First choose a country you want to learn a dish !</p>
+    <div class="flagCountry">
 
 @if (Model.CountryTable != null)
 {
@@ -32,15 +32,61 @@ to cook international dishies 😎</p>
                 </div>
             }
 }
-                 </div>
 </div>
-  </div>
+</div>
+</div>
 
 <div class="showChooseDish">
-  <h2 class="display-7 middleGreen">Choose your dishies</h2>  
-    <p class="greenLime">After you choose you country</br>- you will have some basic</br>info about the country</br>Now choose the dishies you </br>want to try. </p>
+  <div class="showChooseDishLeft">
+  <h2 class="display-7 middleGreen">Choose your dish</h2>  
+    <p class="greenLime">After you choose you country</br></br>- you will have some basic</br>info about the country</br></br>Now choose the dish you </br>want to try. </p>
+  </div>
 
-
+  <div class="showChooseDishRight">
+  <img class="previewExample1" src="/media/exampleCountry.jpg">
+  <img class="previewExample2" src="/media/exampleDishPreview.jpg">
+  </div>
 </div>
 
+<div class="showInfoDish">
+<div class="showInfoDishLeft">
+  <h2 class="display-7 middleGreen">Dish page</h2>  
+    <p class="greenLime">Now that you choose your 
+dishies
+</br>
+You will have several things:
+</br></br>
+⁍ Quick history (if possible)</br>
+Local origin position</br> 
+⁍ Time duration of cooking</br>
+⁍ The video</br>
+⁍ Alergen warning</br> 
+⁍ Ingredient list</br>
+⁍ Nutrition information </p>
+  </div>
+
+  <div class="showInfoDishRight">
+  <img class="previewExample3" src="/media/exampleCountry.jpg">
+  </div>
 </div>
+<div class="container">
+  <div class="map-container">
+    <img class="mapResponsive1" src="media/worldMap.png">
+     <img class="mapResponsive2" src="media/worldMapSmall.png">
+   
+    
+    
+    <a href="/home/algeria" >
+        <div class="point algeria tippy" title="Algeria"></div>
+      </a>
+      <a href="/home/armenia" >
+        <div class="point armenia tippy" title="Armenia"></div>
+      </a>
+      <a href="/home/france" >
+        <div class="point france tippy" title="France"></div>
+      </a>
+  </div>
+</div>
+
+
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/WorldKitchen.csproj": {}
+    "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/WorldKitchen.csproj": {}
   },
   "projects": {
-    "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/WorldKitchen.csproj": {
+    "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/WorldKitchen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/WorldKitchen.csproj",
+        "projectUniqueName": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/WorldKitchen.csproj",
         "projectName": "WorldKitchen",
-        "projectPath": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/WorldKitchen.csproj",
+        "projectPath": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/WorldKitchen.csproj",
         "packagesPath": "/home/davidlinux/.nuget/packages/",
-        "outputPath": "/media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/obj/",
+        "outputPath": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/davidlinux/.nuget/NuGet/NuGet.Config"

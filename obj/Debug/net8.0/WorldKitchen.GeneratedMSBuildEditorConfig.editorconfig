@@ -17,115 +17,115 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WorldKitchen
 build_property.RootNamespace = WorldKitchen
-build_property.ProjectDir = /media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen/
+build_property.ProjectDir = /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /media/mountWindows/Users/david/Desktop/Developpement/Net c#/WorldKitchen
+build_property.MSBuildProjectDirectory = /media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen
 build_property._RazorSourceGeneratorDebug = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Country/Create.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Country/Delete.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Country/Details.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Country/Edit.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Country/Index.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Country/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyeS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Dishies/Create.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Dishies/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaGllcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Dishies/Delete.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Dishies/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaGllcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Dishies/Details.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Dishies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaGllcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Dishies/Edit.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Dishies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaGllcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Dishies/Index.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Dishies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzaGllcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Home/Armenia.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Algeria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BbGdlcmlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Armenia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Bcm1lbmlhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Home/Egypt.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FZ3lwdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Home/Errors.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Errors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Home/France.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/France.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GcmFuY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Home/france/hachisparmentier.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/france/hachisparmentier.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9mcmFuY2UvaGFjaGlzcGFybWVudGllci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Home/Index.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Search/Index.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Search/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/Error.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/_Layout.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/_LayoutCountry.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/_LayoutCountry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRDb3VudHJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/_LayoutDishies.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/_LayoutDishies.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXREaXNoaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/_LayoutSearch.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/_LayoutSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/_SearchBar.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/_SearchBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TZWFyY2hCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/_ViewImports.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/mountWindows/Users/david/Desktop/Developpement/Net c\#/WorldKitchen/Views/_ViewStart.cshtml]
+[/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
