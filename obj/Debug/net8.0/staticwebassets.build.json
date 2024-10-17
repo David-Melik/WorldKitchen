@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hv/ixh++rcueONy3xvblrkL+Q+0gmmNDLGUOYZyKuaA=",
+  "Hash": "2IawBgyI5QEnomod6dWfwtgO2OrNleQBgYUK5zGkTlg=",
   "Source": "WorldKitchen",
   "BasePath": "_content/WorldKitchen",
   "Mode": "Default",
@@ -1347,6 +1347,44 @@
       "OriginalItemSpec": "wwwroot/media/France/fr.svg"
     },
     {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/france.png",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/France/france.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/France/france.png"
+    },
+    {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/hachisparmentier.png",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/France/image/hachisparmentier.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/France/image/hachisparmentier.png"
+    },
+    {
       "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/imageOfUs.png",
       "SourceId": "WorldKitchen",
       "SourceType": "Discovered",
@@ -1383,6 +1421,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/media/worldMap.png"
+    },
+    {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/worldMapSmall.png",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/worldMapSmall.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/worldMapSmall.png"
     }
   ]
 }

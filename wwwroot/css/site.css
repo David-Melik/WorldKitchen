@@ -337,7 +337,6 @@ button.accept-policy {
     max-height: 310px;
   }
   .showChooseDishRight {
-    background-color: green;
     flex-basis: 40%;
     display: flex;
     flex-direction: row;
@@ -488,6 +487,35 @@ button.accept-policy {
   }
 }
 
+/*Search bar result*/
+.searchItem {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+.searchItemInfo {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px 0px 10px 0px;
+  background-color: var(--blueLightSky);
+  border-radius: 10px 0px 0px 10px;
+  color: var(--darkBlue);
+}
+.searchItemInfo h3 {
+  font-size: 1.5rem;
+}
+.searchItemPreview {
+  opacity: 0.6;
+  width: 50%;
+  background-size: 100% 150%;
+  background-blend-mode: #0000003b;
+  border-radius: 0px 10px 10px 0px;
+}
+.searchItemPreviewImage {
+  width: 100px;
+}
 /*footer*/
 footer {
   padding-top: 50px;
@@ -509,6 +537,132 @@ footer {
     max-width: 80px;
   }
 }
+
+/* country page*/
+/* Main Section */
+/* Traditional Dishes Section */
+.traditional-dishies {
+  text-align: center; /* Center the title */
+}
+
+.traditional-dishies h1 {
+  font-size: 50px; /* Larger title size */
+  margin-bottom: 50px; /* Space below the title */
+  background: red;
+}
+
+.country-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.country-section > img {
+  width: 100%;
+  height: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  filter: brightness(50%);
+}
+
+.country-section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Country Explanation Box */
+.country-explication {
+  position: absolute;
+  top: 90%;
+  width: 60%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.country-explication-img {
+  display: flex;
+  align-items: center;
+}
+
+.country-explication-img img {
+  width: 350px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.recipe-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if necessary */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 100px; /* Space between cards */
+}
+
+/* Recipe Card Container */
+.recipe-card {
+  width: 250px; /* Width of the card */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  filter: brightness(50%);
+}
+
+.recipe-info {
+  background-color: #226185;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.recipe-details h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.recipe-details p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.recipe-time {
+  display: flex;
+  align-items: center;
+}
+
+.timer-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.time-text {
+  font-size: 14px;
+}
+
 /*footer */
 /* Footer Section */
 .footer {

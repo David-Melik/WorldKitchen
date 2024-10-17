@@ -257,6 +257,14 @@
       "PackagePath": "staticwebassets/media/France/fr.svg"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/france.png",
+      "PackagePath": "staticwebassets/media/France/france.png"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/hachisparmentier.png",
+      "PackagePath": "staticwebassets/media/France/image/hachisparmentier.png"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/exampleCountry.jpg",
       "PackagePath": "staticwebassets/media/exampleCountry.jpg"
     },
@@ -287,6 +295,10 @@
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/worldMap.png",
       "PackagePath": "staticwebassets/media/worldMap.png"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/worldMapSmall.png",
+      "PackagePath": "staticwebassets/media/worldMapSmall.png"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.WorldKitchen.Microsoft.AspNetCore.StaticWebAssets.props",

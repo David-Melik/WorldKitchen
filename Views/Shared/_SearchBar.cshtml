@@ -17,86 +17,31 @@
       </button>
     </form>
     <div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-           <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Name)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Country)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Traduction)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().VoiceName)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().ImagePreview)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Time)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Video)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Svg1)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Svg2)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Svg3)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Allergen)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().AllergnList)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().IngredientList)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().StepList)</th>
-                    <th>@Html.DisplayNameFor(model => model.DishiesTable.FirstOrDefault().Nutrition)</th>        
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.DishiesTable) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Traduction)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VoiceName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagePreview)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Time)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Video)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Svg1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Svg2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Svg3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Allergen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AllergnList)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IngredientList)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StepList)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nutrition)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+
+@if (Model.DishiesTable != null)
+{
+            @foreach (var Item in Model.DishiesTable)
+            {
+                <div class="searchItem">
+                  <div class="searchItemInfo">
+                    <h3 class="flagCountryElement text-light">@Item.Name</h3>
+                    <p class="flagCountryElement ">@Item.Country</p>
+                    <p class="flagCountryElement ">@Item.Traduction</p>
+                  </div>
+                  <div style="background-image: url(@Item.ImagePreview);" class="searchItemPreview">
+                    <!--<img class="searchItemPreviewImage"src="@Item.ImagePreview">-->
+
+                  </div>
+
+
+                </div>
+            }
 }
-    </tbody>
-</table>    
+
+
+
+
+
 
     </div> <!-- Container for search results -->
   </div>
