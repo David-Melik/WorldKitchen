@@ -9,35 +9,14 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm customNavbar customNavbar bgDarkBlue border-bottom box-shadow mb-3">
-    <header>
-        <nav class="navbar navbar-expand-sm customNavbar customNavbar bgDarkBlue border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                 <img class="logoNav"src="media/footerLogo.png" alt="logo">
-                  WorldKitchen
-                </a>
-            </div> 
-            @Html.Partial("_SearchBar")
-            
-
-
-       </nav>
+        @Html.Partial("_NavBar") 
     </header>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
 
-<footer class="border-top footer text-muted">
-      <img class="footerLogo" src="/media/footerLogo.png">
-      
-        <div class="footerContainerText">
-            &copy; 2024 - WorldKitchen - 
-            <a asp-area="" asp-controller="home" asp-action="index">Home</a> - 
-            <a asp-area="" asp-controller="country" asp-action="index">Country</a> - 
-            <a asp-area="" asp-controller="dishies" asp-action="index">Dishies</a>
-        </div>
-    </footer>
+    @Html.Partial("_Footer")    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

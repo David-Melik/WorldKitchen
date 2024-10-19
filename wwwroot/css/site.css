@@ -51,11 +51,16 @@ html {
 }
 
 a.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   color: white;
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
+
 .nav-item {
   color: white;
 }
@@ -491,7 +496,7 @@ button.accept-policy {
 .searchItem {
   display: flex;
   flex-direction: row;
-  margin: 50px;
+  margin: 5%;
 }
 .searchItemInfo {
   text-align: left;
@@ -503,6 +508,7 @@ button.accept-policy {
   border-radius: 10px 0px 0px 10px;
   color: var(--darkBlue);
 }
+
 .searchItemInfo h3 {
   font-size: 1.5rem;
 }
@@ -516,6 +522,46 @@ button.accept-policy {
 .searchItemPreviewImage {
   width: 100px;
 }
+
+@media (max-width: 610px) {
+  .searchItemInfo {
+    width: 90%;
+  }
+  .searchItemInfo h3 {
+    font-size: 1.2rem;
+  }
+  .searchItemInfo p {
+    font-size: 1rem;
+  }
+
+  .searchItemPreview {
+    opacity: 0.6;
+    width: 50%;
+    background-size: 100% 100%;
+    background-blend-mode: #0000003b;
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+@media (max-width: 400px) {
+  .searchItemInfo {
+    width: 90%;
+  }
+  .searchItemInfo h3 {
+    font-size: 1rem;
+  }
+  .searchItemInfo p {
+    font-size: 0.8rem;
+  }
+
+  .searchItemPreview {
+    opacity: 0.6;
+    width: 50%;
+    background-size: 100% 100%;
+    background-blend-mode: #0000003b;
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
 /*footer*/
 footer {
   padding-top: 50px;

@@ -38,29 +38,13 @@
 
   <body>
      <header>
-        <nav class="navbar navbar-expand-sm customNavbar customNavbar bgDarkBlue border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                 <img class="logoNav"src="media/footerLogo.png" alt="logo">
-                  WorldKitchen
-                </a>
-            </div> 
-            @Html.Partial("_SearchBar")
-         </nav>
+            @Html.Partial("_NavBar")
     </header>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
 
-     <footer style="position: absolute;">
-        <div class="footer-content">
-            <img class="footer-content-img"src="media/footerLogo.png" alt="logo">
-            <div class="footer-text">
-                <h3 class="footer-logo display-5">World Kitchen</h3>
-                <p class="footer-slogan">The best place to learn how to cook international dishies</p>
-            </div>
-        </div>
-    </footer>
+    @Html.Partial("_Footer")
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
