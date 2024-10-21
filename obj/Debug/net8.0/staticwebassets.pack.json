@@ -265,8 +265,20 @@
       "PackagePath": "staticwebassets/media/France/fr.svg"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/clock.svg",
+      "PackagePath": "staticwebassets/media/France/image/clock.svg"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/hachisparmentier.png",
       "PackagePath": "staticwebassets/media/France/image/hachisparmentier.png"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/health.svg",
+      "PackagePath": "staticwebassets/media/France/image/health.svg"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/oven.svg",
+      "PackagePath": "staticwebassets/media/France/image/oven.svg"
     },
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/mapFrance.png",

@@ -733,6 +733,224 @@ button.accept-policy {
   }
 }
 /* dish pages*/
+/* Get Started Section */
+.dish-get-started {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.dish-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dish-image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.dish-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translateY(-20%);
+  background-color: #005f73;
+  color: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 300px;
+  min-height: 350px;
+  text-align: center;
+}
+
+.dish-overlay h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.dish-get-started-button {
+  display: inline-block;
+  background-color: white;
+  color: #005f73;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Features Section */
+.dish-features {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Reduce gap between items */
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.dish-feature-item {
+  flex: 1;
+}
+
+.dish-feature-item img {
+  width: 150px; /* Increase icon size */
+  height: auto;
+}
+
+.dish-feature-item h3 {
+  margin: 10px 0;
+  font-size: 28px; /* Increase heading size */
+}
+
+.dish-feature-item p {
+  color: #888;
+  font-size: 18px; /* Increase text size */
+}
+
+/* Black Rectangle */
+.dish-black-rectangle {
+  width: 1800px;
+  height: 900px; /* Increase height of black rectangle */
+  background-color: black;
+  margin: 50px auto;
+}
+
+/* Ingredients Title */
+.dish-ingredients-title {
+  text-align: center;
+  font-size: 50px;
+  color: #336699;
+  margin: 50px auto; /* Adjust margin to provide space around the title */
+  margin-top: 150px;
+  margin-bottom: 50px; /* Increase space between the title and the black rectangle */
+  width: 80%; /* Match the width of the ingredients section */
+}
+
+/* Ingredients Section */
+.dish-ingredients {
+  position: relative;
+  margin: 0 auto; /* Remove margin-top */
+  width: 80%;
+  background-color: #ccf7cc; /* Light green background */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0dish-1); /* Soft shadow */
+}
+
+.dish-ingredients-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-main-ingredients,
+.optional-ingredients {
+  width: 45%;
+}
+
+.dish-main-ingredients ul,
+.optional-ingredients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dish-main-ingredients li,
+.optional-ingredients li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.dish-optional-ingredients h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Warning Panel */
+.dish-warning-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dish-warning-panel img {
+  width: 100px; /* Adjust the size of the warning image */
+  height: auto;
+}
+
+/* Preparation Section */
+.dish-preparation-section {
+  margin: 50px auto;
+  width: 80%;
+  padding: 20px;
+}
+
+.dish-preparation-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Step Header (Step X/16) */
+.dish-step-header {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.dish-step-number {
+  color: red;
+  font-weight: bold;
+}
+
+/* Step Description Green Rectangle */
+.dish-step-description {
+  background-color: #ccf7cc; /* Light green background */
+  padding: 15px;
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0dish-1); /* Soft shadow */
+  margin-bottom: 30px; /* Space between steps */
+  display: flex;
+  align-items: center;
+}
+
+.dish-step-description input[type="checkbox"] {
+  margin-right: 15px; /* Space between checkbox and text */
+  transform: scale(1dish-5); /* Increase size of the checkbox */
+}
+
+.dish-step-description p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Nutrition Section */
+.dish-nutrition-section {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.dish-nutrition-box {
+  background-color: #ccf7cc; /* Light green background */
+  border-radius: 30px; /* Rounded corners */
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0dish-1); /* Soft shadow */
+}
 /*footer */
 /* Footer Section */
 .footer {

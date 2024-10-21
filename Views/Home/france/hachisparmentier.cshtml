@@ -3,31 +3,10 @@
         Layout = "/Views/Shared/_LayoutDishies.cshtml";
 }
 
-@if (Model.CountryTable != null)
-{
-            @foreach (var itemC in Model.CountryTable)
-            {
-            <h1> @itemC.Country </h1>
-            }
-            }
-
 @if (Model.DishiesTable != null)
 {
-    var dishArray = "";  // Initialize the dishArray variable
-
-    @foreach (var itemD in Model.DishiesTable)
-    {
-        dishArray += itemD.Name + ", ";  // Append the item name with a comma separator
-        @itemD.Name  // Render the item name in the HTML
-    }
-    
-    // Remove the last comma and space from the string (if there are items)
-    if (!string.IsNullOrEmpty(dishArray))
-    {
-        dishArray = dishArray.TrimEnd(',', ' ');
-    }
-
-    <div>
-        Dish Array: @dishArray
-    </div>
+            @foreach (var itemD in Model.DishiesTable)
+            {
+            <h1> @itemD.Name</h1>
+            }
 }
