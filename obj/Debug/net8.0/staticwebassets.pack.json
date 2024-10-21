@@ -253,16 +253,20 @@
       "PackagePath": "staticwebassets/media/Armenia/am.svg"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/backgroundFrance.png",
+      "PackagePath": "staticwebassets/media/France/backgroundFrance.png"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/fr.svg",
       "PackagePath": "staticwebassets/media/France/fr.svg"
     },
     {
-      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/france.png",
-      "PackagePath": "staticwebassets/media/France/france.png"
-    },
-    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/hachisparmentier.png",
       "PackagePath": "staticwebassets/media/France/image/hachisparmentier.png"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/mapFrance.png",
+      "PackagePath": "staticwebassets/media/France/mapFrance.png"
     },
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/exampleCountry.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2IawBgyI5QEnomod6dWfwtgO2OrNleQBgYUK5zGkTlg=",
+  "Hash": "wi4x4U640XKzp9IAb7LV1uMBIq/A/HY2lZwmL810nG8=",
   "Source": "WorldKitchen",
   "BasePath": "_content/WorldKitchen",
   "Mode": "Default",
@@ -1328,6 +1328,25 @@
       "OriginalItemSpec": "wwwroot/media/footerLogoOld.png"
     },
     {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/backgroundFrance.png",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/France/backgroundFrance.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/France/backgroundFrance.png"
+    },
+    {
       "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/fr.svg",
       "SourceId": "WorldKitchen",
       "SourceType": "Discovered",
@@ -1347,25 +1366,6 @@
       "OriginalItemSpec": "wwwroot/media/France/fr.svg"
     },
     {
-      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/france.png",
-      "SourceId": "WorldKitchen",
-      "SourceType": "Discovered",
-      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
-      "BasePath": "_content/WorldKitchen",
-      "RelativePath": "media/France/france.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/media/France/france.png"
-    },
-    {
       "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/image/hachisparmentier.png",
       "SourceId": "WorldKitchen",
       "SourceType": "Discovered",
@@ -1383,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/media/France/image/hachisparmentier.png"
+    },
+    {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/mapFrance.png",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/France/mapFrance.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/France/mapFrance.png"
     },
     {
       "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/imageOfUs.png",

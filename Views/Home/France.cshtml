@@ -3,81 +3,52 @@
     ViewData["Title"] = "Country and Dishes Details";
     Layout = "/Views/Shared/_LayoutCountry.cshtml";
 }
-<!-- Displaying Country Table -->
-<h1>France page </h1>
 @if (Model.CountryTable != null)
 {
-    <table>
-        <thead>
-            <tr>
-                <th>Country Name</th>
-                <!-- Other table headers -->
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var d in Model.CountryTable)
+            @foreach (var itemC in Model.CountryTable)
             {
-                <tr>
-                    <td>@d.Country</td> <!-- Assuming Country has a Name property -->
-                    <!-- Other data fields -->
-                </tr>
-            }
-        </tbody>
-    </table>
-}
 
-<!-- Displaying Dishies Table -->
-@if (Model.DishiesTable != null)
-{
-    <table>
-        <thead>
-            <tr>
-                <th>Dish Name</th>
-                <!-- Other table headers -->
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var e in Model.DishiesTable)
-            {
-                <tr>
-                    <td>@e.Name</td> <!-- Assuming Dishies has a Name property -->
-                    <!-- Other data fields -->
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+
+
+
+
 
 
  <!-- Country Section -->
         <section class="country-section">
-            <img src="/media/france.png" alt="photo emblématique de la France">
-            <h1> France</h1>
+            <img src="@itemC.Background" alt="photo emblématique de la France">
+            <h1>@itemC.Country</h1>
             <div class="country-explication">
+              <div class="country-explication-content">
                 <div class="country-explication-img">
-                    <img src="drapeau_France.png" alt="drapeau de la France">
-                    <img src="france_carte_du_monde.png" alt="localisation de la france sur la carte du monde">
+                    <img src="@itemC.Flag" alt="drapeau de la France">
+                    <img src="@itemC.Map" alt="localisation de la france sur la carte du monde">
                 </div>
                 <div class="country-explication-txt">
-                    <p>France, located in Western Europe, is renowned for its rich history, stunning architecture, and vibrant culture.
-                        <br /><br />
-                    - Population: Approximately 67 million people<br />
-                    - Language Spoken: French (official language)</p>
-                </div>
+                    <p> @itemC.Description                </div>
+            </div>
             </div>
         </section>
+            }
+}
 
-        <!-- Traditional Dishes Section -->
+@if (Model.DishiesTable != null)
+{
+<!-- Traditional Dishes Section -->
         <div class="traditional-dishies">
             <h1>Traditional Dishes</h1>
             <div class="recipe-cards-container">
+            @foreach (var itemD in Model.DishiesTable)
+            {
+
+        
                 <!-- Recipe Card 1 -->
                 <div class="recipe-card">
                     <img src="friand_aux_saucisses.png" alt="Friands au saucisses" class="recipe-image">
                     <div class="recipe-info">
                         <div class="recipe-details">
-                            <h3>Sausage Rolls</h3>
-                            <p>Friands au saucisses</p>
+                            <h3>@itemD.Name</h3>
+                            <p> Friands au saucisses</p>
                         </div>
                         <div class="recipe-time">
                             <span class="timer-icon">&#9201;</span>
@@ -85,35 +56,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- Recipe Card 2 -->
-                <div class="recipe-card">
-                    <img src="hachis_parmentier.png" alt="Hachis Parmentier" class="recipe-image">
-                    <div class="recipe-info">
-                        <div class="recipe-details">
-                            <h3>Hachis Parmentier</h3>
-                            <p>Hachis  Parmentier</p>
-                        </div>
-                        <div class="recipe-time">
-                            <span class="timer-icon">&#9201;</span>
-                            <span class="time-text">45 min</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Recipe Card 3 -->
-                <div class="recipe-card">
-                    <img src="tarte_tatin.png" alt="Tarte Tatin" class="recipe-image">
-                    <div class="recipe-info">
-                        <div class="recipe-details">
-                            <h3>Tatin Tart</h3>
-                            <p>Tarte Tatin</p>
-                        </div>
-                        <div class="recipe-time">
-                            <span class="timer-icon">&#9201;</span>
-                            <span class="time-text">25 min</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+            }
+   </div>
         </div>
 
-
+}
+<style>
+.mb-3 {
+  margin-bottom: 0px !important;
+}
+</style>

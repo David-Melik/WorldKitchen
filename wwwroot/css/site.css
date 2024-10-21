@@ -221,13 +221,25 @@ button.accept-policy {
   }
 }
 */
-
+.logoText {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
 .logoNav {
   width: 100px;
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .logoNav {
     width: 80px;
   }
+  .logoText {
+    display: none;
+  }
+  .overlay-content {
+    width: 135%;
+  }
 }
+
 .searchBar {
   display: flex;
   justify-content: center;
@@ -441,7 +453,7 @@ button.accept-policy {
     0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .map-container .france {
-  top: 30%;
+  top: 29%;
   left: 45%;
 }
 .map-container .algeria {
@@ -479,7 +491,7 @@ button.accept-policy {
     display: unset;
   }
   .map-container .france {
-    top: 29%;
+    top: 28%;
     left: 21%;
   }
   .map-container .algeria {
@@ -564,6 +576,7 @@ button.accept-policy {
 
 /*footer*/
 footer {
+  position: absolute;
   padding-top: 50px;
   background: black;
   align-content: end;
@@ -587,12 +600,13 @@ footer {
 /* country page*/
 /* Main Section */
 /* Traditional Dishes Section */
+
 .traditional-dishies {
   text-align: center; /* Center the title */
 }
 
 .traditional-dishies h1 {
-  font-size: 50px; /* Larger title size */
+  /*font-size: 50px;*/ /* Larger title size */
   margin-bottom: 50px; /* Space below the title */
   background: red;
 }
@@ -605,20 +619,20 @@ footer {
 }
 
 .country-section > img {
+  margin-block-start: -1px;
   width: 100%;
-  height: auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  height: 250px;
+  object-fit: cover;
   filter: brightness(50%);
 }
 
 .country-section h1 {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 100px;
+  /*font-size: 100px;*/
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -626,27 +640,27 @@ footer {
 
 /* Country Explanation Box */
 .country-explication {
-  position: absolute;
-  top: 90%;
-  width: 60%;
-  margin: 0 auto;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fff;
-  padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-block-start: -2rem;
 }
 
+.country-explication-content {
+  padding: 20px;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+}
 .country-explication-img {
   display: flex;
   align-items: center;
 }
 
 .country-explication-img img {
-  width: 350px;
+  width: 100px;
   height: auto;
   margin-right: 10px;
 }
@@ -708,7 +722,21 @@ footer {
 .time-text {
   font-size: 14px;
 }
-
+@media (max-width: 768px) {
+  .country-explication img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .country-section > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    filter: brightness(50%);
+  }
+}
 /*footer */
 /* Footer Section */
 .footer {
