@@ -1,6 +1,8 @@
 ﻿var isClicked = localStorage.getItem("isClicked") === "true";
 var isUrlCaptured = localStorage.getItem("isUrlCaptured") === "true";
 var currentUrl; // Declare currentUrl in global scope
+var searchPerformed = localStorage.getItem("searchPerformed") ===
+                      "true"; // Track if search has been performed
 
 function openSearch() {
   document.getElementById("searchInput").style.display = "none";
@@ -23,6 +25,17 @@ function openSearch() {
   isClicked = true; // Set the variable to true
   localStorage.setItem("isClicked",
                        isClicked); // Store the value in localStorage
+
+  // Check if search has already been performed
+  if (!searchPerformed) {
+    performSearch();                                 // Call the search function
+    localStorage.setItem("searchPerformed", "true"); // Mark search as performed
+  }
+}
+
+function performSearch() {
+  // Trigger the search form submission programmatically
+  document.getElementById("searchForm").submit();
 }
 
 function closeSearch() {
@@ -36,6 +49,7 @@ function closeSearch() {
   // Reset URL and flag
   localStorage.removeItem("currentUrl");
   localStorage.removeItem("isUrlCaptured");
+  localStorage.removeItem("searchPerformed"); // Reset search performed status
 }
 
 // Function to check if isClicked is true on page load and open the overlay if
