@@ -236,7 +236,7 @@ button.accept-policy {
     display: none;
   }
   .overlay-content {
-    width: 135%;
+    width: 100%;
   }
 }
 
@@ -574,41 +574,18 @@ button.accept-policy {
   }
 }
 
-/*footer*/
-footer {
-  position: absolute;
-  padding-top: 50px;
-  background: black;
-  align-content: end;
-  text-align: center;
-}
-.footerContainerText {
-  color: lime;
-  text-align: center;
-  /* add the wrap text brake*/
-}
-.footerLogo {
-  width: 25%;
-  max-width: 90px;
-  margin: auto;
-
-  @media (max-width: 768px) {
-    max-width: 80px;
-  }
-}
-
 /* country page*/
 /* Main Section */
 /* Traditional Dishes Section */
 
 .traditional-dishies {
-  text-align: center; /* Center the title */
+  text-align: left; /* Center the title */
+  margin: 0px 10% 0px 10%;
 }
 
 .traditional-dishies h1 {
   /*font-size: 50px;*/ /* Larger title size */
   margin-bottom: 50px; /* Space below the title */
-  background: red;
 }
 
 .country-section {
@@ -636,19 +613,24 @@ footer {
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: 768px) {
+    top: 17%;
+  }
 }
 
 /* Country Explanation Box */
 .country-explication {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 0;
   margin-block-start: -2rem;
+  margin-bottom: 36px;
 }
 
 .country-explication-content {
+  display: flex;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   width: 80%;
   background: white;
@@ -656,13 +638,26 @@ footer {
 }
 .country-explication-img {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-right: 20px;
 }
-
+@media (max-width: 768px) {
+  .country-explication-img {
+    flex-direction: row;
+  }
+  .country-explication-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .country-explication-content p {
+    font-size: 1rem;
+  }
+}
 .country-explication-img img {
   width: 100px;
   height: auto;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .recipe-cards-container {
@@ -724,7 +719,7 @@ footer {
 }
 @media (max-width: 768px) {
   .country-explication img {
-    width: 60px;
+    width: 80px;
     height: auto;
     margin-right: 10px;
   }
@@ -737,11 +732,11 @@ footer {
     filter: brightness(50%);
   }
 }
+/* dish pages*/
 /*footer */
 /* Footer Section */
 .footer {
   max-height: 150px;
-  position: unset;
 
   @media (max-width: 768px) {
     position: absolute;
@@ -752,10 +747,10 @@ footer {
   }
 }
 footer {
+  position: absolute;
   background-color: var(--darkBlue);
   color: white;
   text-align: center;
-  position: unset;
 
   right: 0;
   bottom: 0;

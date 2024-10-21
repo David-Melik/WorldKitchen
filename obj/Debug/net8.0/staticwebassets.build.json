@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wi4x4U640XKzp9IAb7LV1uMBIq/A/HY2lZwmL810nG8=",
+  "Hash": "7z2YoaJhomZ8a7/o51vMGzWDfrFinIwFf+xXiVVveyg=",
   "Source": "WorldKitchen",
   "BasePath": "_content/WorldKitchen",
   "Mode": "Default",
@@ -1326,6 +1326,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/media/footerLogoOld.png"
+    },
+    {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/audio/hachisparmentier.mp3",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/France/audio/hachisparmentier.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/France/audio/hachisparmentier.mp3"
     },
     {
       "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/backgroundFrance.png",

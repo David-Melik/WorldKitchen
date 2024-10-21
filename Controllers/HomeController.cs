@@ -35,26 +35,24 @@ public class HomeController : Controller
         return char.ToUpper(str[0]) + str.Substring(1).ToLower();
     }
 
-    public IActionResult checkUrl(string dishies, string country, string path, bool state)
+    public IActionResult checkUrl(string country, string path, bool state)
     {
         if ((path.EndsWith(country) || path.EndsWith(country + "/")) || state)
-        {
+        {   //for home,search,error Pages
             if (state)
             {
                 var tablesAll = new BigViewModel
                 {
                     CountryTable = _context.Country,
                     DishiesTable = _context.Dishies
-
                 };
                 return View(tablesAll);
             }
 
-            string capatalizeCountry = CapitalizeFirstLetter(country); //to be ready to use for combine the two model
-
+            //for Country Pages
+            string capatalizeCountry = CapitalizeFirstLetter(country);
             var tables = new BigViewModel
             {
-
                 // Filter CountryTable by the 'Country' field (which contains country names like 'France')
                 CountryTable = _context.Country
                 .Where(c => c.Country.Equals(capatalizeCountry))
@@ -67,47 +65,44 @@ public class HomeController : Controller
             };
             return View(tables);
         }
-
-        // The rest of your logic...
-        var dishArray = dishies.Split(',');
-
-        for (int i = 0; i < dishArray.Length; i++)
+        else
+        // for Dish
         {
-            var currentDish = dishArray[i];
-            var urlDishies = $"{country}/{currentDish}".ToLower();
-
-            if (path.Contains(currentDish.ToLower()) && path.EndsWith(urlDishies))
+            var DishiesTableElement = new BigViewModel
             {
-                string capatalizeCountry = CapitalizeFirstLetter(country); //to be ready to use for combine the two model
+                DishiesTable = _context.Dishies.ToList()  // Populate the DishiesTable with data from the database
+            };
 
+            // Now, loop through the DishiesTable property, not the view model itself
+            foreach (var itemD in DishiesTableElement.DishiesTable)
+            {
+                string dishRenamed = itemD.Name.Replace(" ", "").ToLower();
+                var urlDish = $"{country}/{dishRenamed}".ToLower();
 
-                var tables = new BigViewModel
+                if (path.Contains(dishRenamed.ToLower()) && path.EndsWith(urlDish))
                 {
+                    var tables = new BigViewModel
+                    {
+                        DishiesTable = _context.Dishies
+                                       .Where(d => d.Name.Equals(itemD.Name))
+                                       .ToList()
+                    };
+                    return View(urlDish, tables);
+                }
 
-                    // Filter CountryTable by the 'Country' field (which contains country names like 'France')
-                    CountryTable = _context.Country
-                  .Where(c => c.Country.Equals(capatalizeCountry))
-                  .ToList(),
-
-                    // Filter DishiesTable by the 'Country' field (assuming 'Country' is the field in Dishies as well)
-                    DishiesTable = _context.Dishies
-                  .Where(d => d.Country.Equals(capatalizeCountry))
-                  .ToList()
-                };
-                return View(urlDishies, tables); // Update to your dishes view if needed
             }
-        }
 
+
+        }
         return View("Errors");
     }
 
     public IActionResult Index()
     {
         string country = ("");
-        string dishies = ""; //Put the dishies you have
         string path = "";
         bool state = true;
-        return checkUrl(dishies, country, path, state);
+        return checkUrl(country, path, state);
     }
     public IActionResult Country()
     {
@@ -125,10 +120,9 @@ public class HomeController : Controller
     public IActionResult Errors()
     {
         string country = ("");
-        string dishies = ""; //Put the dishies you have
         string path = Request.Path.ToString().ToLower();
         bool state = true;
-        return checkUrl(dishies, country, path, state);
+        return checkUrl(country, path, state);
     }
 
     // Constructor to initialize DbContext
@@ -139,10 +133,9 @@ public class HomeController : Controller
     {
 
         string country = ("france");
-        string dishies = "hachisparmentier,pomme,poire"; //Put the dishies you have
         string path = Request.Path.ToString().ToLower();
         bool state = false;
-        return checkUrl(dishies, country, path, state);
+        return checkUrl(country, path, state);
         //var countries = _context.Country.ToList(); // Or whatever logic you use to get the list
         //return View(countries); // Ensure the view receives an IEnumerable<DatabaseWorldKitchenCountry>
 
@@ -153,19 +146,17 @@ public class HomeController : Controller
     {
         var country = ("armenia");
         var path = Request.Path.ToString().ToLower();
-        var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
         bool state = false;
-        return checkUrl(dishies, country, path, state);
+        return checkUrl(country, path, state);
 
     }
 
-    public IActionResult Egypt()
+    public IActionResult Algeria()
     {
-        var country = ("egypt");
+        var country = ("algeria");
         var path = Request.Path.ToString().ToLower();
-        var dishies = "hachisparmentier,pomme,poire";  //Put the dishies you have
         bool state = false;
-        return checkUrl(dishies, country, path, state);
+        return checkUrl(country, path, state);
 
     }
 

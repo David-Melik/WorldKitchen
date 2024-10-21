@@ -253,6 +253,10 @@
       "PackagePath": "staticwebassets/media/Armenia/am.svg"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/audio/hachisparmentier.mp3",
+      "PackagePath": "staticwebassets/media/France/audio/hachisparmentier.mp3"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/backgroundFrance.png",
       "PackagePath": "staticwebassets/media/France/backgroundFrance.png"
     },
