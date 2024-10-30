@@ -338,6 +338,78 @@ ViewData["Title"] = $"{itemD.Name} Page";
           </div>
         </div>
       </section>
+      <section mv-app="todo_app" class="todoapp" mv-init="#initial_data">
+    <header class="header">
+        <h1>todos</h1>
+    </header>
+
+    <!-- Main todo list section with view-only checkboxes -->
+    <section class="main">
+        <ul mv-list class="todo-list">
+            <li mv-list-item="todo" class="[if(done, 'completed')]">
+                <div class="view">
+                    <!-- Each checkbox checks the previous checkbox state before allowing to check -->
+                    <input property="done" class="toggle" type="checkbox" onclick="enableCheckbox(this)" />
+                    <label property="text">Todo Item</label>
+                    <!-- Warning message container -->
+                    <small class="warning-message" style="color: red; display: none; text-align: center; opacity: 0.8;">
+                        Please check the previous item first.
+                    </small>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>
+
+<script type="application/json" id="initial_data">
+    {
+        "todo": [
+            {
+                "done": true,
+                "text": "Taste JavaScript"
+            },
+            {
+                "done": false,
+                "text": "Code furiously"
+            },
+            {
+                "done": false,
+                "text": "Promote Mavo"
+            },
+            {
+                "done": false,
+                "text": "Give talks"
+            },
+            {
+                "done": false,
+                "text": "Write tutorials"
+            },
+            {
+                "done": false,
+                "text": "Have a life!"
+            }
+        ]
+    }
+</script>
+
+<script>
+// Function to control checkbox enablement based on the previous checkbox's state
+function enableCheckbox(current) {
+    const previousCheckbox = current.closest("li").previousElementSibling?.querySelector("input[type='checkbox']");
+    const warningMessage = current.nextElementSibling.nextElementSibling; // Selects the <small> element
+
+    // Check if previous checkbox exists and is unchecked
+    if (previousCheckbox && !previousCheckbox.checked) {
+        current.checked = false; // Prevent checking if previous is not checked
+        warningMessage.style.display = 'block'; // Show warning message
+        warningMessage.style.textAlign = 'center'; // Corrected camelCase for textAlign
+        warningMessage.style.opacity = '0.8'; // Set opacity
+    } else {
+        warningMessage.style.display = 'none'; // Hide warning if previous checkbox is checked
+    }
+}
+</script>
+
 
       <!-- Nutrition Properties Section -->
       <h2 class="dish-ingredients-title">Nutrition Properties</h2>
