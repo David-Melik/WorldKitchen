@@ -285,6 +285,10 @@
       "PackagePath": "staticwebassets/media/France/mapFrance.png"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/attention.png",
+      "PackagePath": "staticwebassets/media/attention.png"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/exampleCountry.jpg",
       "PackagePath": "staticwebassets/media/exampleCountry.jpg"
     },

@@ -7,6 +7,7 @@ ViewData["Title"] = $"{itemD.Name} Page";
 }
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +67,7 @@ ViewData["Title"] = $"{itemD.Name} Page";
             text-decoration: line-through;
         }
     </style>
-     <li class="list-group-item">
+        <li class="list-group-item">
             <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
             <span>450g ground pork sausage</span>
         </li>
@@ -77,28 +78,30 @@ ViewData["Title"] = $"{itemD.Name} Page";
         <li class="list-group-item">
             <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
             <span>100g diced tomatoes</span>
-        </li>
-<button class="btn btn-danger mt-3" onclick="resetList()">Reset</button>
+      </li>
 
+        <!--<button class="btn btn-danger mt-3" onclick="resetList()">Reset</button>-->
+<script>
+    // Fonction pour ajouter/enlever la classe "strikethrough" au texte associé à la checkbox
+    function toggleStrikethrough(checkbox) {
+        var text = checkbox.nextElementSibling;
+        if (checkbox.checked) {
+            text.classList.add('strikethrough');
+        } else {
+            text.classList.remove('strikethrough');
+        }
+    }
+</script>
 
-              <li><input class="form-check-input"  type="checkbox" /> 450g ground pork sausage</li>
-
-              <li><input class="form-check-input" type="checkbox" /> 1 onion</li>
-              <li><input class="form-check-input"  type="checkbox" /> 1 clove garlic</li>
-              <li><input class="form-check-input" type="checkbox" /> 1 tablespoon fresh thyme</li>
-              <li><input class="form-check-input" type="checkbox" /> 1 tablespoon fresh sage</li>
-              <li><input class="form-check-input" type="checkbox" /> 1 tablespoon fresh parsley</li>
-              <li><input class="form-check-input" type="checkbox" /> salt and pepper</li>
-              <li>
-                <input class="form-check-input" type="checkbox" /> 2 sheets of ready-made puff pastry
-              </li>
-              <li><input class="form-check-input" type="checkbox" /> 1 egg</li>
             </ul>
           </div>
           <div class="dish-optional-ingredients">
             <h3>Optional:</h3>
             <ul>
-              <li><input class="form-check-input" type="checkbox" /> 2 tablespoons of Dijon mustard</li>
+              <li class="list-group-item">
+            <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
+            <span> 2 tablespoons of Dijon mustard</span>
+        </li>
               <li>
                 <input class="form-check-input" type="checkbox" /> 1/2 cup of grated cheese (Gruyère or
                 Cheddar)
@@ -109,6 +112,7 @@ ViewData["Title"] = $"{itemD.Name} Page";
         <!-- Warning Panel -->
         <div class="dish-warning-panel">
           <img src="attention.png" alt="Warning" />
+          <span> contains possible allergn ingredients </span>
         </div>
       </section>
 
@@ -338,83 +342,14 @@ ViewData["Title"] = $"{itemD.Name} Page";
           </div>
         </div>
       </section>
-      <section mv-app="todo_app" class="todoapp" mv-init="#initial_data">
-    <header class="header">
-        <h1>todos</h1>
-    </header>
-
-    <!-- Main todo list section with view-only checkboxes -->
-    <section class="main">
-        <ul mv-list class="todo-list">
-            <li mv-list-item="todo" class="[if(done, 'completed')]">
-                <div class="view">
-                    <!-- Each checkbox checks the previous checkbox state before allowing to check -->
-                    <input property="done" class="toggle" type="checkbox" onclick="enableCheckbox(this)" />
-                    <label property="text">Todo Item</label>
-                    <!-- Warning message container -->
-                    <small class="warning-message" style="color: red; display: none; text-align: center; opacity: 0.8;">
-                        Please check the previous item first.
-                    </small>
-                </div>
-            </li>
-        </ul>
-    </section>
-</section>
-
-<script type="application/json" id="initial_data">
-    {
-        "todo": [
-            {
-                "done": true,
-                "text": "Taste JavaScript"
-            },
-            {
-                "done": false,
-                "text": "Code furiously"
-            },
-            {
-                "done": false,
-                "text": "Promote Mavo"
-            },
-            {
-                "done": false,
-                "text": "Give talks"
-            },
-            {
-                "done": false,
-                "text": "Write tutorials"
-            },
-            {
-                "done": false,
-                "text": "Have a life!"
-            }
-        ]
-    }
-</script>
-
-<script>
-// Function to control checkbox enablement based on the previous checkbox's state
-function enableCheckbox(current) {
-    const previousCheckbox = current.closest("li").previousElementSibling?.querySelector("input[type='checkbox']");
-    const warningMessage = current.nextElementSibling.nextElementSibling; // Selects the <small> element
-
-    // Check if previous checkbox exists and is unchecked
-    if (previousCheckbox && !previousCheckbox.checked) {
-        current.checked = false; // Prevent checking if previous is not checked
-        warningMessage.style.display = 'block'; // Show warning message
-        warningMessage.style.textAlign = 'center'; // Corrected camelCase for textAlign
-        warningMessage.style.opacity = '0.8'; // Set opacity
-    } else {
-        warningMessage.style.display = 'none'; // Hide warning if previous checkbox is checked
-    }
-}
-</script>
-
 
       <!-- Nutrition Properties Section -->
       <h2 class="dish-ingredients-title">Nutrition Properties</h2>
       <section class="dish-nutrition-section">
-        <div class="dish-nutrition-box"></div>
+        <div class="dish-nutrition-box">
+
+
+        </div>
       </section>
             }
 }
@@ -429,67 +364,4 @@ function enableCheckbox(current) {
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-    <script>
-    // Fonction pour barrer/décocher le texte au clic sur la checkbox et stocker dans le localStorage
-    function toggleStrikethrough(checkbox) {
-        var text = checkbox.nextElementSibling;
-        if (checkbox.checked) {
-            text.classList.add('strikethrough');
-        } else {
-            text.classList.remove('strikethrough');
-        }
-        // Sauvegarder l'état de la checkbox
-        saveCheckboxState();
-    }
-
-    // Fonction pour sauvegarder l'état des cases à cocher
-    function saveCheckboxState() {
-        var checkboxes = document.querySelectorAll('.form-check-input');
-        var checkboxStates = {};
-
-        checkboxes.forEach(function(checkbox) {
-            checkboxStates[checkbox.id] = checkbox.checked;
-        });
-
-        // Sauvegarde dans le localStorage
-        localStorage.setItem('checkboxStates', JSON.stringify(checkboxStates));
-    }
-
-    // Fonction pour charger l'état des cases à cocher à partir du localStorage
-    function loadCheckboxState() {
-        var checkboxStates = JSON.parse(localStorage.getItem('checkboxStates'));
-
-        if (checkboxStates) {
-            var checkboxes = document.querySelectorAll('.form-check-input');
-
-            checkboxes.forEach(function(checkbox) {
-                checkbox.checked = checkboxStates[checkbox.id] || false;
-                // Barrer le texte si la case est cochée
-                if (checkbox.checked) {
-                    checkbox.nextElementSibling.classList.add('strikethrough');
-                } else {
-                    checkbox.nextElementSibling.classList.remove('strikethrough');
-                }
-            });
-        }
-    }
-
-    // Fonction pour réinitialiser la liste (désélectionner toutes les cases et supprimer le localStorage)
-    function resetList() {
-        var checkboxes = document.querySelectorAll('.form-check-input');
-
-        checkboxes.forEach(function(checkbox) {
-            checkbox.checked = false;
-            checkbox.nextElementSibling.classList.remove('strikethrough');
-        });
-
-        // Supprimer le localStorage
-        localStorage.removeItem('checkboxStates');
-    }
-
-    // Charger l'état des cases à cocher au chargement de la page
-    window.onload = function() {
-        loadCheckboxState();
-    };
-</script>
 </body>

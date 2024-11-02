@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N5FG2W0WfCmDlOUDLAMb8FeN/0moW91htGly4wxAeIE=",
+  "Hash": "H1EdPaeC2CYBYs7t6IC5Wo6O6NSXjk32rYKaQ2tO9C0=",
   "Source": "WorldKitchen",
   "BasePath": "_content/WorldKitchen",
   "Mode": "Default",
@@ -1212,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/media/Armenia/am.svg"
+    },
+    {
+      "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/attention.png",
+      "SourceId": "WorldKitchen",
+      "SourceType": "Discovered",
+      "ContentRoot": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/",
+      "BasePath": "_content/WorldKitchen",
+      "RelativePath": "media/attention.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/media/attention.png"
     },
     {
       "Identity": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/exampleCountry.jpg",
