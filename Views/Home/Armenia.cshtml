@@ -26,8 +26,8 @@
     </table>
 }
 
-<!-- Displaying Dishies Table -->
-@if (Model.DishiesTable != null)
+<!-- Displaying Dish Table -->
+@if (Model.DishTable != null)
 {
     <table>
         <thead>
@@ -37,10 +37,10 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var e in Model.DishiesTable)
+            @foreach (var e in Model.DishTable)
             {
                 <tr>
-                    <td>@e.Name</td> <!-- Assuming Dishies has a Name property -->
+                    <td>@e.Name</td> <!-- Assuming Dish has a Name property -->
                     <!-- Other data fields -->
                 </tr>
             }

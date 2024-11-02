@@ -5,14 +5,14 @@
 namespace WorldKitchen.Migrations
 {
     /// <inheritdoc />
-    public partial class AddAllergnListToDishies : Migration
+    public partial class AddAllergnListToDish : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
                 name: "AllergnList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: true);
         }
@@ -22,7 +22,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "AllergnList",
-                table: "Dishies");
+                table: "Dish");
         }
     }
 }

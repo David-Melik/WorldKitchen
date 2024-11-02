@@ -12,7 +12,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.RenameColumn(
                 name: "Nutrition",
-                table: "Dishies",
+                table: "Dish",
                 newName: "NutritionList");
         }
 
@@ -21,7 +21,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.RenameColumn(
                 name: "NutritionList",
-                table: "Dishies",
+                table: "Dish",
                 newName: "Nutrition");
         }
     }

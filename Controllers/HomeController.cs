@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using WorldKitchen.Data;
 using WorldKitchen.Models;
-using System.Data;
 using System.Net;
-using WorldKitchen.Models;
 
 namespace WorldKitchen.Controllers;
 
@@ -22,9 +21,6 @@ public class HomeController : Controller
         _logger = logger;
         _context = context;
     }
-
-
-
 
     // Function
     public string CapitalizeFirstLetter(string str)
@@ -44,7 +40,7 @@ public class HomeController : Controller
                 var tablesAll = new BigViewModel
                 {
                     CountryTable = _context.Country,
-                    DishiesTable = _context.Dishies
+                    DishTable = _context.Dish
                 };
                 return View(tablesAll);
             }
@@ -58,8 +54,8 @@ public class HomeController : Controller
                 .Where(c => c.Country.Equals(capatalizeCountry))
                 .ToList(),
 
-                // Filter DishiesTable by the 'Country' field (assuming 'Country' is the field in Dishies as well)
-                DishiesTable = _context.Dishies
+                // Filter DishTable by the 'Country' field (assuming 'Country' is the field in Dish as well)
+                DishTable = _context.Dish
                 .Where(d => d.Country.Equals(capatalizeCountry))
                 .ToList()
             };
@@ -68,13 +64,13 @@ public class HomeController : Controller
         else
         // for Dish
         {
-            var DishiesTableElement = new BigViewModel
+            var DishTableElement = new BigViewModel
             {
-                DishiesTable = _context.Dishies.ToList()  // Populate the DishiesTable with data from the database
+                DishTable = _context.Dish.ToList()  // Populate the DishTable with data from the database
             };
 
-            // Now, loop through the DishiesTable property, not the view model itself
-            foreach (var itemD in DishiesTableElement.DishiesTable)
+            // Now, loop through the DishTable property, not the view model itself
+            foreach (var itemD in DishTableElement.DishTable)
             {
                 string dishRenamed = itemD.Name.Replace(" ", "").ToLower();
                 var urlDish = $"{country}/{dishRenamed}".ToLower();
@@ -83,7 +79,7 @@ public class HomeController : Controller
                 {
                     var tables = new BigViewModel
                     {
-                        DishiesTable = _context.Dishies
+                        DishTable = _context.Dish
                                        .Where(d => d.Name.Equals(itemD.Name))
                                        .ToList()
                     };
@@ -108,9 +104,9 @@ public class HomeController : Controller
     {
         return RedirectToAction("Index", "Country");
     }
-    public IActionResult Dishies()
+    public IActionResult Dish()
     {
-        return RedirectToAction("Index", "Dishies");
+        return RedirectToAction("Index", "Dish");
     }
     public IActionResult Search()
     {

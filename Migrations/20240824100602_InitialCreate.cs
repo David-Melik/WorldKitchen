@@ -27,7 +27,7 @@ namespace WorldKitchen.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Dishies",
+                name: "Dish",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -49,7 +49,7 @@ namespace WorldKitchen.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Dishies", x => x.Id);
+                    table.PrimaryKey("PK_Dish", x => x.Id);
                 });
         }
 
@@ -60,7 +60,7 @@ namespace WorldKitchen.Migrations
                 name: "Country");
 
             migrationBuilder.DropTable(
-                name: "Dishies");
+                name: "Dish");
         }
     }
 }

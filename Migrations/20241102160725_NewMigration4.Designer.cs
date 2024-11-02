@@ -47,7 +47,7 @@ namespace WorldKitchen.Migrations
                     b.ToTable("Country");
                 });
 
-            modelBuilder.Entity("WorldKitchen.Models.DatabaseWorldKitchenDishies", b =>
+            modelBuilder.Entity("WorldKitchen.Models.DatabaseWorldKitchenDish", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -106,7 +106,7 @@ namespace WorldKitchen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Dishies");
+                    b.ToTable("Dish");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,7 +12,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.AddColumn<string>(
                 name: "Url",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: false,
                 defaultValue: "");
@@ -23,7 +23,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "Url",
-                table: "Dishies");
+                table: "Dish");
         }
     }
 }

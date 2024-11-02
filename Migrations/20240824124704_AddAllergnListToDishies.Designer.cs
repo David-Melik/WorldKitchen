@@ -11,8 +11,8 @@ using WorldKitchen.Data;
 namespace WorldKitchen.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240824124704_AddAllergnListToDishies")]
-    partial class AddAllergnListToDishies
+    [Migration("20240824124704_AddAllergnListToDish")]
+    partial class AddAllergnListToDish
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace WorldKitchen.Migrations
                     b.ToTable("Country");
                 });
 
-            modelBuilder.Entity("WorldKitchen.Models.DatabaseWorldKitchenDishies", b =>
+            modelBuilder.Entity("WorldKitchen.Models.DatabaseWorldKitchenDish", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,7 +99,7 @@ namespace WorldKitchen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Dishies");
+                    b.ToTable("Dish");
                 });
 #pragma warning restore 612, 618
         }

@@ -56,9 +56,9 @@ public string dishInfo(List<string> inputString, string option)
           </div>
           ");
 
-          @if (Model.DishiesTable != null)
+          @if (Model.DishTable != null)
           {
-            @foreach (var itemD in Model.DishiesTable)
+            @foreach (var itemD in Model.DishTable)
             {
               if (itemD.Allergen is true)
               {

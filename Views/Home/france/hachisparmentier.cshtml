@@ -1,11 +1,11 @@
 @model WorldKitchen.Models.BigViewModel
 @{
-        Layout = "/Views/Shared/_LayoutDishies.cshtml";
+        Layout = "/Views/Shared/_LayoutDish.cshtml";
 }
 
-@if (Model.DishiesTable != null)
+@if (Model.DishTable != null)
 {
-            @foreach (var itemD in Model.DishiesTable)
+            @foreach (var itemD in Model.DishTable)
             {
             <h1> @itemD.Name</h1>
             }

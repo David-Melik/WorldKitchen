@@ -21,10 +21,10 @@ namespace WorldKitchen.Controllers
         public async Task<IActionResult> Index(string searchString)
         {
 
-            // Step 1: Filter and populate the DishiesTable within the BigViewModel
+            // Step 1: Filter and populate the DishTable within the BigViewModel
             var tables = new BigViewModel
             {
-                DishiesTable = await _context.Dishies
+                DishTable = await _context.Dish
                     .Where(d => string.IsNullOrEmpty(searchString) ||
                                  d.Country.ToLower().Contains(searchString.ToLower()) ||
                                  d.Name.ToLower().Contains(searchString.ToLower()))

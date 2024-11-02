@@ -12,7 +12,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.AlterColumn<string>(
                 name: "StepList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: false,
                 defaultValue: "[]",
@@ -22,7 +22,7 @@ namespace WorldKitchen.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "NutritionList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: false,
                 defaultValue: "[]",
@@ -32,7 +32,7 @@ namespace WorldKitchen.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "IngredientList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: false,
                 defaultValue: "[]",
@@ -42,7 +42,7 @@ namespace WorldKitchen.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "AllergnList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: false,
                 defaultValue: "[]",
@@ -56,7 +56,7 @@ namespace WorldKitchen.Migrations
         {
             migrationBuilder.AlterColumn<string>(
                 name: "StepList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: true,
                 oldClrType: typeof(string),
@@ -64,7 +64,7 @@ namespace WorldKitchen.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "NutritionList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: true,
                 oldClrType: typeof(string),
@@ -72,7 +72,7 @@ namespace WorldKitchen.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "IngredientList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: true,
                 oldClrType: typeof(string),
@@ -80,7 +80,7 @@ namespace WorldKitchen.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "AllergnList",
-                table: "Dishies",
+                table: "Dish",
                 type: "TEXT",
                 nullable: true,
                 oldClrType: typeof(string),

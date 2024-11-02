@@ -13,7 +13,7 @@
         <mxCell id="Fat-w30UhJoveqbfwIK7-2" value="Home page" style="shape=card;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
           <mxGeometry x="250" y="350" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Fat-w30UhJoveqbfwIK7-4" value="Dishies page" style="shape=card;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
+        <mxCell id="Fat-w30UhJoveqbfwIK7-4" value="Dish page" style="shape=card;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
           <mxGeometry x="250" y="540" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Fat-w30UhJoveqbfwIK7-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-5" target="Fat-w30UhJoveqbfwIK7-4" edge="1">
@@ -52,7 +52,7 @@
         <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="61J5Tnl77Fy-Qc3Q7Ucb-6" target="61J5Tnl77Fy-Qc3Q7Ucb-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-6" value="Dishies page" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-6" value="Dish page" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="80" y="720" width="80" height="110" as="geometry" />
         </mxCell>
         <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-7" value="&lt;div align=&quot;left&quot;&gt;- Name&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Country&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- &lt;br&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;traduction name&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;original name&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;voice original &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;/span&gt;image&lt;/div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;time&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Image&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Video&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- 3* SVG icon&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- allergn == true or false&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;allergn text&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- ingredient list&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- step list&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- nutrition proreities&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
