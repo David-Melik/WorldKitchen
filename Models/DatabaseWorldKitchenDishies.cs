@@ -1,4 +1,4 @@
-// Models/DatabaseWorldKitchenDishies.cs
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WorldKitchen.Models
@@ -19,10 +19,21 @@ namespace WorldKitchen.Models
         public string? Svg2 { get; set; }
         public string? Svg3 { get; set; }
         public bool Allergen { get; set; }
-        public string? AllergnList { get; set; }
-        public string? IngredientList { get; set; }
-        public string? StepList { get; set; }
-        public string? Nutrition { get; set; }
+
+        // Changed to List<string>? and initialized to an empty list in the constructor
+        public List<string> AllergnList { get; set; }
+        public List<string> IngredientList { get; set; }
+        public List<string> StepList { get; set; }
+        public List<string> NutritionList { get; set; }
+
+        // Constructor to initialize lists
+        public DatabaseWorldKitchenDishies()
+        {
+            AllergnList = new List<string>();
+            IngredientList = new List<string>();
+            StepList = new List<string>();
+            NutritionList = new List<string>();
+        }
     }
 }
 

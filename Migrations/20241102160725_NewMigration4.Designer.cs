@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WorldKitchen.Data;
 
@@ -10,9 +11,11 @@ using WorldKitchen.Data;
 namespace WorldKitchen.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241102160725_NewMigration4")]
+    partial class NewMigration4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
@@ -54,7 +57,6 @@ namespace WorldKitchen.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("AllergnList")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Country")
@@ -65,7 +67,6 @@ namespace WorldKitchen.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("IngredientList")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -73,11 +74,9 @@ namespace WorldKitchen.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NutritionList")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("StepList")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Svg1")

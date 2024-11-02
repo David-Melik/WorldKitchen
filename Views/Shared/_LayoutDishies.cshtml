@@ -1,11 +1,233 @@
 @if (Model.DishiesTable != null)
 {
-@foreach (var itemD in Model.DishiesTable)
-{
-ViewData["Title"] = $"{itemD.Name} Page";
+  @foreach (var itemD in Model.DishiesTable)
+  {
+    ViewData["Title"] = $"{itemD.Name} Page";
+  }
 }
-}
+@functions {
+public string dishInfo(List<string> inputString, string option)
+    {
+        var result = new System.Text.StringBuilder();
+        if (option == "ingredient")
+        {
+           if (inputString == null || inputString.Count == 0)
+            {
+            return string.Empty;
+            }
+          result.Append($@" 
+          <h2 class=""dish-ingredients-title"">Ingredients</h2>
+          <section class=""dish-ingredients"">
+            <div class=""dish-ingredients-container"">
+            <div class=""dish-main-ingredients"">
+            <ul>
+          ");
+          for (int i = 0; i < inputString.Count; i++)
+          {
+            if (inputString[i] == "optional")
+            {
+              result.Append($@" <div class=""dish-optional-ingredients"">
+              <h3>Optional:</h3>
+              <ul>
+              "); 
+              for (int j = i+1; j < inputString.Count; j++)
+              {
+                result.Append($@"<li class=""list-group-item"">
+                <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+                <span> {inputString[j]} </span>
+                </li>
+                ");
+              }
+              result.Append($@"
+                </ul>
+                </div>");
+              i = inputString.Count;
+              break;
+            }
+            result.Append($@"
+              <li class=""list-group-item"">
+              <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+              <span> {inputString[i]} </span>
+              </li>
+              ");
+          }
+          result.Append($@"
+          </ul>
+          </div>
+          ");
 
+          @if (Model.DishiesTable != null)
+          {
+            @foreach (var itemD in Model.DishiesTable)
+            {
+              if (itemD.Allergen is true)
+              {
+                result.Append($@"        
+                 <div class=""dish-warning-panel"">
+                 <img src=""/media/attention.png"" alt=""Warning"" />
+                 </div>
+                 <p> may contains allergy such as {itemD.AllergnList}</p>
+                 </section>
+                 ");
+                return result.ToString();
+              }
+            }
+          }
+          return result.ToString();
+        }
+        if (option == "step")
+        {
+          result.Append($@" 
+           <!-- Preparation Section -->
+           <h2 class=""dish-ingredients-title"">Preparation</h2>
+           <section class=""dish-preparation-section"">
+           <div class=""dish-preparation-steps"">");
+          int counter = 1;
+          int total = inputString.Count;
+          if (inputString == null || inputString.Count == 0)
+          {
+            return string.Empty;
+          }
+          foreach (var item in inputString)
+          {
+            result.Append($@"     
+             <!-- Step {counter} -->
+                      <div class=""dish-step"">
+                        <input class=""form-check-input"" type=""checkbox"" />
+                        <span class=""dish-step-header""
+                          ><span class=""step-number"">Step {counter} </span><span>/{total}</span></span
+                        >
+                        <div class=""dish-step-description"">
+                          <p>
+                           {item}
+                          </p>
+                        </div>
+                      </div>
+            ");
+            counter = counter + 1;
+          }
+          result.Append($@"
+            </div>
+            </section>
+            ");
+          return result.ToString();
+        }
+        if (option == "nutrition")
+        {
+          if ( inputString.Count != 10)
+          {
+            return string.Empty;
+          }
+          result.Append($@" 
+                <!-- Nutrition Properties Section -->
+      <h2 class=""dish-ingredients-title"">Nutrition Properties</h2>
+      <section class=""dish-nutrition-section"">
+        <div class=""dish-nutrition-box"">
+          <section class=""performance-facts"">
+            <header class=""performance-facts__header"">
+              <h1 class=""performance-facts__title"">Nutrition Facts</h1>
+          
+            </header>
+            <table class=""performance-facts__table"">
+              <thead>
+                <tr>
+                  <th colspan=""3"" class=""small-info"">
+                    Amount Per 100g
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Calories</b>
+                    {inputString[0]}
+                  </th>
+          
+                </tr>
+                <tr class=""thick-row"">
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Total Fat</b>
+                    {inputString[1]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Saturated Fat
+                    {inputString[2]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Trans Fat
+                    {inputString[3]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Cholesterol</b>
+                    {inputString[4]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Sodium</b>
+                    {inputString[5]}
+                  </th>
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Total Carbohydrate</b>
+                    {inputString[6]}
+                  </th>
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Dietary Fiber
+                    {inputString[7]}
+                  </th>
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Sugars
+                    {inputString[8]}
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+                <tr class=""thick-end"">
+                  <th colspan=""2"">
+                    <b>Protein</b>
+                    {inputString[9]}
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+      </div>
+      </section>
+          ");
+        return result.ToString();
+        }
+return string.Empty;
+    }
+}
 
 
 <!DOCTYPE html>
@@ -24,7 +246,7 @@ ViewData["Title"] = $"{itemD.Name} Page";
 
 
 
-    @if (Model.DishiesTable != null)
+@if (Model.DishiesTable != null)
 {
             @foreach (var itemD in Model.DishiesTable)
             {
@@ -49,309 +271,18 @@ ViewData["Title"] = $"{itemD.Name} Page";
         @Html.Raw(itemD.Svg1)
          @Html.Raw(itemD.Svg2)
           @Html.Raw(itemD.Svg3)
-        
       </section>
 
       <!-- Black Rectangle Under Features -->
       <section class="dish-black-rectangle"></section>
 
-      <!-- Ingredients Section -->
-      <h2 class="dish-ingredients-title">Ingredients</h2>
-      <section class="dish-ingredients">
-        <div class="dish-ingredients-container">
-          <div class="dish-main-ingredients">
-            <ul>
-    <style>
-        /* Classe pour barrer le texte */
-        .strikethrough {
-            text-decoration: line-through;
-        }
-    </style>
-        <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
-            <span>450g ground pork sausage</span>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
-            <span>200g chopped onions</span>
-        </li>
-        <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
-            <span>100g diced tomatoes</span>
-      </li>
-
-        <!--<button class="btn btn-danger mt-3" onclick="resetList()">Reset</button>-->
-<script>
-    // Fonction pour ajouter/enlever la classe "strikethrough" au texte associé à la checkbox
-    function toggleStrikethrough(checkbox) {
-        var text = checkbox.nextElementSibling;
-        if (checkbox.checked) {
-            text.classList.add('strikethrough');
-        } else {
-            text.classList.remove('strikethrough');
-        }
-    }
-</script>
-
-            </ul>
-          </div>
-          <div class="dish-optional-ingredients">
-            <h3>Optional:</h3>
-            <ul>
-              <li class="list-group-item">
-            <input class="form-check-input" type="checkbox" onclick="toggleStrikethrough(this)" /> 
-            <span> 2 tablespoons of Dijon mustard</span>
-        </li>
-              <li>
-                <input class="form-check-input" type="checkbox" /> 1/2 cup of grated cheese (Gruyère or
-                Cheddar)
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Warning Panel -->
-        <div class="dish-warning-panel">
-          <img src="attention.png" alt="Warning" />
-          <span> contains possible allergn ingredients </span>
-        </div>
-      </section>
-
-      <!-- Preparation Section -->
-      <h2 class="dish-ingredients-title">Preparation</h2>
-      <section class="dish-preparation-section">
-        <div class="dish-preparation-steps">
-          <!-- Step 1 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 1</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                In a large bowl, combine the ground pork sausage, finely chopped
-                onion, minced garlic, chopped herbs (thyme, sage, parsley),
-                salt, and pepper. Mix well until all ingredients are evenly
-                distributed.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 2</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                If using, mix in the mustard and grated cheese for added flavor.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 3</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Preheat the oven to 400°F (200°C) and line a baking sheet with
-                parchment paper.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 4</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                On a lightly floured surface, roll out the puff pastry sheets to
-                smooth any creases and to slightly increase their size.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 5</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Cut each puff pastry sheet in half lengthwise to create four
-                long strips.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 6 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 6</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>Divide the sausage mixture into four equal portions.</p>
-            </div>
-          </div>
-
-          <!-- Step 7 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 7</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Shape each portion into a long log, approximately the same
-                length as the puff pastry strips.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 8 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 8</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>Place a sausage log along the center of each pastry strip.</p>
-            </div>
-          </div>
-
-          <!-- Step 9 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 9</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Roll the pastry over the sausage filling, sealing the edges by
-                pressing them together. You can use a little water to help seal
-                the edges if necessary.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 10 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 10</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Place the rolls seam-side down on the prepared baking sheet.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 11 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 11</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                In a small bowl, beat the egg with a tablespoon of water to
-                create an egg wash.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 12 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 12</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Brush the top of each sausage roll with the egg wash to give
-                them a shiny, golden finish when baked.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 13 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 13</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Using a sharp knife, score the tops of the sausage rolls lightly
-                at 1-inch intervals. This helps release steam and makes them
-                easier to cut after baking.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 14 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 14</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Bake in the preheated oven for 20-25 minutes, or until the
-                pastry is golden brown and puffed, and the sausage filling is
-                cooked through.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 15 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 15</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Allow the sausage rolls to cool slightly before cutting them
-                into bite-sized pieces.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 16 -->
-          <div class="dish-step">
-            <input class="form-check-input" type="checkbox" />
-            <span class="dish-step-header"
-              ><span class="step-number">Step 16</span><span>/16</span></span
-            >
-            <div class="dish-step-description">
-              <p>
-                Serve warm or at room temperature, optionally with dipping
-                sauces like mustard or aioli.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Nutrition Properties Section -->
-      <h2 class="dish-ingredients-title">Nutrition Properties</h2>
-      <section class="dish-nutrition-section">
-        <div class="dish-nutrition-box">
+@Html.Raw(dishInfo(itemD.IngredientList, "ingredient"))
+@Html.Raw(dishInfo(itemD.StepList, "step"))
+@Html.Raw(dishInfo(itemD.NutritionList, "nutrition"))
 
 
-        </div>
-      </section>
-            }
+
+          }
 }
 
         <main role="main" class="pb-3">

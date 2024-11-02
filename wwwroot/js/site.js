@@ -3,7 +3,16 @@ var isUrlCaptured = localStorage.getItem("isUrlCaptured") === "true";
 var currentUrl; // Declare currentUrl in global scope
 var searchPerformed = localStorage.getItem("searchPerformed") ===
                       "true"; // Track if search has been performed
-
+// Fonction pour ajouter/enlever la classe "strikethrough" au texte associé à la
+// checkbox
+function toggleStrikethrough(checkbox) {
+  var text = checkbox.nextElementSibling;
+  if (checkbox.checked) {
+    text.classList.add("strikethrough");
+  } else {
+    text.classList.remove("strikethrough");
+  }
+}
 function openSearch() {
   document.getElementById("searchInput").style.display = "none";
   document.getElementById("myOverlay").style.display = "block";
