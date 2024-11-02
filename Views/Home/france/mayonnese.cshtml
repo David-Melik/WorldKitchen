@@ -16,6 +16,7 @@ public string dishInfo(List<string> inputString, string option)
             return string.Empty;
             }
           result.Append($@" 
+          <h2 class=""dish-ingredients-title"">Ingredients</h2>
           <section class=""dish-ingredients"">
             <div class=""dish-ingredients-container"">
             <div class=""dish-main-ingredients"">
@@ -118,6 +119,10 @@ public string dishInfo(List<string> inputString, string option)
             return string.Empty;
           }
           result.Append($@" 
+                <!-- Nutrition Properties Section -->
+      <h2 class=""dish-ingredients-title"">Nutrition Properties</h2>
+      <section class=""dish-nutrition-section"">
+        <div class=""dish-nutrition-box"">
           <section class=""performance-facts"">
             <header class=""performance-facts__header"">
               <h1 class=""performance-facts__title"">Nutrition Facts</h1>
@@ -215,6 +220,8 @@ public string dishInfo(List<string> inputString, string option)
               </tbody>
             </table>
           </section>
+      </div>
+      </section>
           ");
         return result.ToString();
         }
