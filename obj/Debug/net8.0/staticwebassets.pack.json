@@ -245,12 +245,28 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/Algeria/backgroundAlgeria.png",
+      "PackagePath": "staticwebassets/media/Algeria/backgroundAlgeria.png"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/Algeria/dz.svg",
       "PackagePath": "staticwebassets/media/Algeria/dz.svg"
     },
     {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/Algeria/mapAlgeria.svg",
+      "PackagePath": "staticwebassets/media/Algeria/mapAlgeria.svg"
+    },
+    {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/Armenia/am.svg",
       "PackagePath": "staticwebassets/media/Armenia/am.svg"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/Armenia/backgroundArmenia.png",
+      "PackagePath": "staticwebassets/media/Armenia/backgroundArmenia.png"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/Armenia/mapArmenia.svg",
+      "PackagePath": "staticwebassets/media/Armenia/mapArmenia.svg"
     },
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/audio/hachisparmentier.mp3",
@@ -281,8 +297,12 @@
       "PackagePath": "staticwebassets/media/France/image/oven.svg"
     },
     {
-      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/mapFrance.png",
-      "PackagePath": "staticwebassets/media/France/mapFrance.png"
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/mapFrance.svg",
+      "PackagePath": "staticwebassets/media/France/mapFrance.svg"
+    },
+    {
+      "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/France/video/hachiparmentier.mp4",
+      "PackagePath": "staticwebassets/media/France/video/hachiparmentier.mp4"
     },
     {
       "Id": "/media/MountPointHDD2/Desktop/Dev/WorldKitchen/WorldKitchen/wwwroot/media/attention.png",

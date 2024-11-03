@@ -16,8 +16,8 @@ public string dishInfo(List<string> inputString, string option)
             return string.Empty;
             }
           result.Append($@" 
-          <h2 class=""dish-ingredients-title"">Ingredients</h2>
           <section class=""dish-ingredients"">
+                      <h2 class=""dish-ingredients-title"">Ingredients</h2>
             <div class=""dish-ingredients-container"">
             <div class=""dish-main-ingredients"">
             <ul>
@@ -62,13 +62,15 @@ public string dishInfo(List<string> inputString, string option)
             {
               if (itemD.Allergen is true)
               {
-                result.Append($@"        
-                 <div class=""dish-warning-panel"">
-                 <img src=""/media/attention.png"" alt=""Warning"" />
-                 </div>
-                 <p> may contains allergy such as {itemD.AllergnList}</p>
-                 </section>
-                 ");
+                var allergens = string.Join(", ", itemD.AllergnList);
+
+                  result.Append($@"
+                <div class=""dish-warning-panel"">
+                    <img src=""/media/attention.png"" alt=""Warning"" />
+                    <p>May contain allergens such as:</br> {allergens}</p>
+                </div>
+                </section>
+            ");
                 return result.ToString();
               }
             }
@@ -79,8 +81,8 @@ public string dishInfo(List<string> inputString, string option)
         {
           result.Append($@" 
            <!-- Preparation Section -->
-           <h2 class=""dish-ingredients-title"">Preparation</h2>
            <section class=""dish-preparation-section"">
+                        <h2 class=""dish-ingredients-title"">Preparation</h2>
            <div class=""dish-preparation-steps"">");
           int counter = 1;
           int total = inputString.Count;
@@ -93,10 +95,10 @@ public string dishInfo(List<string> inputString, string option)
             result.Append($@"     
              <!-- Step {counter} -->
                       <div class=""dish-step"">
-                        <input class=""form-check-input"" type=""checkbox"" />
-                        <span class=""dish-step-header""
-                          ><span class=""step-number"">Step {counter} </span><span>/{total}</span></span
-                        >
+                         <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+
+                        <span class=""dish-step-header"">
+                          <span class=""step-number"">Step {counter} </span><span>/{total}</span></span>
                         <div class=""dish-step-description"">
                           <p>
                            {item}
@@ -120,7 +122,6 @@ public string dishInfo(List<string> inputString, string option)
           }
           result.Append($@" 
                 <!-- Nutrition Properties Section -->
-      <h2 class=""dish-ingredients-title"">Nutrition Properties</h2>
       <section class=""dish-nutrition-section"">
         <div class=""dish-nutrition-box"">
           <section class=""performance-facts"">
@@ -261,7 +262,7 @@ return string.Empty;
           />
           <div class="dish-overlay">
             <h2>@itemD.Name</h2>
-            <a href="#" class="dish-get-started-button">Get Started!</a>
+            <a href="#videoStart" class="dish-get-started-button">Get Started!</a>
           </div>
         </div>
       </section>
@@ -274,12 +275,14 @@ return string.Empty;
       </section>
 
       <!-- Black Rectangle Under Features -->
-      <section class="dish-black-rectangle"></section>
-
+      <video id="videoStart"class="video" controls>
+        <source src="@itemD.Video" type="video/mp4">
+      </video>
+      <div class="dishInfo">
 @Html.Raw(dishInfo(itemD.IngredientList, "ingredient"))
 @Html.Raw(dishInfo(itemD.StepList, "step"))
 @Html.Raw(dishInfo(itemD.NutritionList, "nutrition"))
-
+      </div>
 
 
           }
