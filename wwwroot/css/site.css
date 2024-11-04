@@ -1119,7 +1119,8 @@ footer {
   left: 0;
   padding: 1rem;
   @media (min-width: 768px) {
-    position: absolute;
+    /*position: absolute;*/
+    padding: 0.5rem;
   }
 }
 
@@ -1127,10 +1128,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (min-width: 768px) {
+    max-height: 100px;
+    .display-5 {
+      font-size: calc(1rem + 1.5vw);
+    }
+    .footer-slogan {
+      font-size: 1rem;
+    }
+  }
 }
 
 .footer-content-img {
-  width: 200px;
+  width: 80px;
   height: auto;
   @media (max-width: 768px) {
     width: 100px;
