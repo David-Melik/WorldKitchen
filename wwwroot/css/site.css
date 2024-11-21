@@ -511,7 +511,15 @@ button.accept-policy {
 .searchItem {
   display: flex;
   flex-direction: row;
-  margin: 5%;
+  margin: 15px;
+  max-width: 570px;
+  width: 100%;
+}
+.searchItemContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .searchItemInfo {
   text-align: left;
