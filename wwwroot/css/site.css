@@ -279,6 +279,7 @@ button.accept-policy {
   width: 100%;
   max-width: 250px;
   margin: auto;
+  box-shadow: 10px 5px 5px #a8a8a8;
 
   @media (max-width: 768px) {
     max-width: 150px;
@@ -337,10 +338,12 @@ button.accept-policy {
   max-width: 35%;
   min-width: 250px;
   margin-bottom: 25px;
+  box-shadow: 10px 5px 5px #a8a8a8;
 }
 .previewExample2 {
   max-width: 35%;
-  min-width: 250px;
+  min-width: 320px;
+  box-shadow: 10px 5px 5px #a8a8a8;
 }
 @media (min-width: 1030px) {
   .showChooseDish {
@@ -395,7 +398,8 @@ button.accept-policy {
 }
 .previewExample3 {
   max-width: 50%;
-  min-width: 250px;
+  min-width: 500px;
+  box-shadow: 10px 5px 5px #a8a8a8;
 }
 @media (min-width: 1030px) {
   .showInfoDish {
@@ -819,7 +823,7 @@ button.accept-policy {
   width: 50px; /* Increase icon size */
   height: auto;
   @media (min-width: 768px) {
-    width: 150px; /* Increase icon size */
+    width: 80px; /* Increase icon size */
     height: auto;
   }
 }
