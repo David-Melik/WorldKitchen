@@ -1,0 +1,134 @@
+@if (Model.CountryTable != null)
+{
+@foreach (var itemC in Model.CountryTable)
+            {
+            ViewData["Title"] = $"{itemC.Country} Page";
+}
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WorldKitchen</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+            @Html.Partial("_NavBar")
+    </header>
+    <main role="main" class="pb-3">
+      @if (Model.CountryTable != null)
+{
+            @foreach (var itemC in Model.CountryTable)
+            {
+ <!-- Country Section -->
+        <section class="country-section">
+            <img src="@itemC.Background" >
+            <h1>@itemC.Country</h1>
+            <div class="country-explication">
+              <div class="country-explication-content">
+                <div class="country-explication-img">
+                    <img src="@itemC.Flag" alt="drapeau de la France">
+                    <img src="@itemC.Map" alt="localisation de la france sur la carte du monde">
+                </div>
+                <div class="country-explication-txt">
+                    <p>@Html.Raw(itemC.Description)               </div>
+            </div>
+            </div>
+        </section>
+            }
+}
+
+@if (Model.DishTable != null)
+{
+<!-- Traditional Dishes Section -->
+        <div class="traditional-dishies">
+            <h1>Traditional Dishes</h1>
+            <div class="recipe-cards-container">
+            @foreach (var itemD in Model.DishTable)
+            {
+
+        
+            <audio id="@itemD.Name" src="@itemD.VoiceName" autostart="false"></audio>
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card" >
+                  <a href="@itemD.Url">
+                    <img src="@itemD.ImagePreview" alt="Friands au saucisses" class="recipe-image"> </a>
+                    <div class="recipe-info">
+                        <div class="recipe-details">
+                            <h3>@itemD.Name</h3>
+                            
+
+
+
+
+                            <div style="display: flex;" >
+<p > @itemD.Traduction </p>
+<svg onclick="play('@itemD.Name')" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <path d="M16 9C16.5 9.5 17 10.5 17 12C17 13.5 16.5 14.5 16 15M19 6C20.5 7.5 21 10 21 12C21 14 20.5 16.5 19 18M13 3L7 8H5C3.89543 8 3 8.89543 3 10V14C3 15.1046 3.89543 16 5 16H7L13 21V3Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
+
+</svg>
+                            </div>
+
+
+<script>
+   function play(id) {
+    const audioElement = document.getElementById(id);
+	
+	resetAll();
+
+    if (audioElement.paused) {
+        audioElement.play();
+    }
+}
+
+function resetAll() {
+	const audioElements = document.querySelectorAll('audio[id^="sound-"]');
+	
+	audioElements.forEach(audioElement => {
+		audioElement.pause();
+		audioElement.currentTime = 0;
+	});
+}
+
+</script>
+
+
+                        </div>
+                        <div class="recipe-time">
+                            <span class="timer-icon">&#9201;</span>
+                            <span class="time-text">@itemD.Time min</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+   </div>
+        </div>
+
+}
+<style>
+.mb-3 {
+  margin-bottom: 0px !important;
+}
+</style>
+            @RenderBody()
+    </main>
+
+    @Html.Partial("_Footer")
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

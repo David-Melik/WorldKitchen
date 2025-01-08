@@ -1,0 +1,236 @@
+@model WorldKitchen.Models.BigViewModel
+@{
+var test = new List<string> { "Ingredient1","Ingredient1","Ingredient1", "optional", "Ingredient2" };
+var test2 = new List<string> { "5g","5g","5g","5g","5g","5g","5g","5g","5g","5g" };
+
+}
+
+@functions {
+public string dishInfo(List<string> inputString, string option)
+    {
+        var result = new System.Text.StringBuilder();
+        if (option == "ingredient")
+        {
+           if (inputString == null || inputString.Count == 0)
+            {
+            return string.Empty;
+            }
+          result.Append($@" 
+          <h2 class=""dish-ingredients-title"">Ingredients</h2>
+          <section class=""dish-ingredients"">
+            <div class=""dish-ingredients-container"">
+            <div class=""dish-main-ingredients"">
+            <ul>
+          ");
+          for (int i = 0; i < inputString.Count; i++)
+          {
+            if (inputString[i] == "optional")
+            {
+              result.Append($@" <div class=""dish-optional-ingredients"">
+              <h3>Optional:</h3>
+              <ul>
+              "); 
+              for (int j = i+1; j < inputString.Count; j++)
+              {
+                result.Append($@"<li class=""list-group-item"">
+                <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+                <span> {inputString[j]} </span>
+                </li>
+                ");
+              }
+              result.Append($@"
+                </ul>
+                </div>");
+              i = inputString.Count;
+              break;
+            }
+            result.Append($@"
+              <li class=""list-group-item"">
+              <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+              <span> {inputString[i]} </span>
+              </li>
+              ");
+          }
+          result.Append($@"
+          </ul>
+          </div>
+          ");
+
+          @if (Model.DishTable != null)
+          {
+            @foreach (var itemD in Model.DishTable)
+            {
+              if (itemD.Allergen is true)
+              {
+                result.Append($@"        
+                 <div class=""dish-warning-panel"">
+                 <img src=""/media/attention.png"" alt=""Warning"" />
+                 </div>
+                 <p> may contains allergy such as {itemD.AllergnList}</p>
+                 </section>
+                 ");
+                return result.ToString();
+              }
+            }
+          }
+          return result.ToString();
+        }
+        if (option == "step")
+        {
+          result.Append($@" 
+           <!-- Preparation Section -->
+           <h2 class=""dish-ingredients-title"">Preparation</h2>
+           <section class=""dish-preparation-section"">
+           <div class=""dish-preparation-steps"">");
+          int counter = 1;
+          int total = inputString.Count;
+          if (inputString == null || inputString.Count == 0)
+          {
+            return string.Empty;
+          }
+          foreach (var item in inputString)
+          {
+            result.Append($@"     
+             <!-- Step {counter} -->
+                      <div class=""dish-step"">
+                        <input class=""form-check-input"" type=""checkbox"" />
+                        <span class=""dish-step-header""
+                          ><span class=""step-number"">Step {counter} </span><span>/{total}</span></span
+                        >
+                        <div class=""dish-step-description"">
+                          <p>
+                           {item}
+                          </p>
+                        </div>
+                      </div>
+            ");
+            counter = counter + 1;
+          }
+          result.Append($@"
+            </div>
+            </section>
+            ");
+          return result.ToString();
+        }
+        if (option == "nutrition")
+        {
+          if ( inputString.Count != 10)
+          {
+            return string.Empty;
+          }
+          result.Append($@" 
+                <!-- Nutrition Properties Section -->
+      <h2 class=""dish-ingredients-title"">Nutrition Properties</h2>
+      <section class=""dish-nutrition-section"">
+        <div class=""dish-nutrition-box"">
+          <section class=""performance-facts"">
+            <header class=""performance-facts__header"">
+              <h1 class=""performance-facts__title"">Nutrition Facts</h1>
+          
+            </header>
+            <table class=""performance-facts__table"">
+              <thead>
+                <tr>
+                  <th colspan=""3"" class=""small-info"">
+                    Amount Per 100g
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Calories</b>
+                    {inputString[0]}
+                  </th>
+          
+                </tr>
+                <tr class=""thick-row"">
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Total Fat</b>
+                    {inputString[1]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Saturated Fat
+                    {inputString[2]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Trans Fat
+                    {inputString[3]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Cholesterol</b>
+                    {inputString[4]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Sodium</b>
+                    {inputString[5]}
+                  </th>
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Total Carbohydrate</b>
+                    {inputString[6]}
+                  </th>
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Dietary Fiber
+                    {inputString[7]}
+                  </th>
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Sugars
+                    {inputString[8]}
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+                <tr class=""thick-end"">
+                  <th colspan=""2"">
+                    <b>Protein</b>
+                    {inputString[9]}
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+      </div>
+      </section>
+          ");
+        return result.ToString();
+        }
+return string.Empty;
+    }
+}
+
+<h1>Test algorithme ingredient - step - nutrition </h1>
+
+@Html.Raw(dishInfo(test, "ingredient"))
+@Html.Raw(dishInfo(test, "step"))
+@Html.Raw(dishInfo(test2, "nutrition"))

@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0" version="24.7.7">
+  <diagram name="Page-1" id="pHe-2L-Uf6nmMBNhzklK">
+    <mxGraphModel dx="1389" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Fat-w30UhJoveqbfwIK7-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-1" target="Fat-w30UhJoveqbfwIK7-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-1" value="S" style="triangle;whiteSpace=wrap;html=1;direction=south;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-2" value="Home page" style="shape=card;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
+          <mxGeometry x="250" y="350" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-4" value="Dish page" style="shape=card;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
+          <mxGeometry x="250" y="540" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-5" target="Fat-w30UhJoveqbfwIK7-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-5" value="Country page" style="shape=card;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
+          <mxGeometry x="250" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-2" target="Fat-w30UhJoveqbfwIK7-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-8" value="&lt;div&gt;Nav&lt;/div&gt;&lt;div&gt;Footer&lt;/div&gt;&lt;div&gt;Search bar&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="520" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-8" target="Fat-w30UhJoveqbfwIK7-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=50;entryPerimeter=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-8" target="Fat-w30UhJoveqbfwIK7-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fat-w30UhJoveqbfwIK7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=30;entryPerimeter=0;" parent="1" source="Fat-w30UhJoveqbfwIK7-8" target="Fat-w30UhJoveqbfwIK7-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="61J5Tnl77Fy-Qc3Q7Ucb-1" target="61J5Tnl77Fy-Qc3Q7Ucb-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-1" value="Country" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="510" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Fat-w30UhJoveqbfwIK7-5" target="61J5Tnl77Fy-Qc3Q7Ucb-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-3" value="&lt;div align=&quot;left&quot;&gt;- Name&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Background image&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- country flag&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- map image&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- text description&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="630" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="61J5Tnl77Fy-Qc3Q7Ucb-6" target="61J5Tnl77Fy-Qc3Q7Ucb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-6" value="Dish page" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="80" y="720" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-7" value="&lt;div align=&quot;left&quot;&gt;- Name&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Country&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- &lt;br&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;traduction name&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;original name&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;voice original &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;/span&gt;image&lt;/div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;time&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Image&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- Video&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- 3* SVG icon&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- allergn == true or false&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;allergn text&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- ingredient list&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- step list&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- nutrition proreities&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="920" width="180" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="61J5Tnl77Fy-Qc3Q7Ucb-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Fat-w30UhJoveqbfwIK7-4" target="61J5Tnl77Fy-Qc3Q7Ucb-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,10 @@
+@model WorldKitchen.Models.BigViewModel
+<nav class="navbar navbar-expand-sm customNavbar customNavbar bgDarkBlue border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+    <img class="logoNav"src="/media/footerLogo.png" alt="logo">
+    <span class="logoText"> World Kitchen </span>
+    </a>
+    </div> 
+ @Html.Partial("_SearchBar", Model)
+</nav>

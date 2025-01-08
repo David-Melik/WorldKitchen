@@ -1,0 +1,92 @@
+﻿@model WorldKitchen.Models.BigViewModel
+@{
+    ViewData["Title"] = "Home Page";
+     Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="bigContainer">
+  <!-- First part -->
+  <h1 class="display-4 bold">Welcome to Worldkitchen</h1>
+  <p class = "blockquote">It is the best place to learn </br>how 
+to cook international dishies 😎</p>
+  <div class="aboutUs">
+    <p class="aboutUsText">Made by 3 friends</br> making the website </br>of their dream</p>
+   <!-- <img class="imageOfUs" src="/media/imageOfUs.png"> -->  </div>
+
+<h2 class="display-6 bold">How does this work ?</h2>
+<div class="mb-3">
+<div class ="showCountry">
+    <h2 class="display-7 middleGreen">Choose by Country</h2>  
+    <p id="showCountryP" class="greenLime"> First choose a country you want to learn a dish !</p>
+    <div class="flagCountry">
+
+@if (Model.CountryTable != null)
+{
+            @foreach (var d in Model.CountryTable)
+            {
+                <div>
+                    <img class="showCountryFlag" src="@d.Flag">
+                    <p class="flagCountryElement greenLime">@d.Country</p>
+
+                </div>
+            }
+}
+</div>
+</div>
+</div>
+
+<div class="showChooseDish">
+  <div class="showChooseDishLeft">
+  <h2 class="display-7 middleGreen">Choose your dish</h2>  
+    <p class="greenLime">After you choose your country</br></br>- you will have some basic</br>info about the country</br></br>Now choose the dish you </br>want to try. </p>
+  </div>
+
+  <div class="showChooseDishRight">
+  <img class="previewExample1" src="/media/exampleDishPreview.jpg">
+  <img class="previewExample2" src="/media/exampleDish.jpg">
+  </div>
+</div>
+
+<div class="showInfoDish">
+<div class="showInfoDishLeft">
+  <h2 class="display-7 middleGreen">Dish page</h2>  
+    <p class="greenLime">Now that you choose your 
+dishes
+</br>
+You will have several things:
+</br></br>
+⁍ Quick history (if possible)</br>
+Local origin position</br> 
+⁍ Time duration of cooking</br>
+⁍ The video</br>
+⁍ Allergen warning</br> 
+⁍ Ingredient list</br>
+⁍ Nutrition information </p>
+  </div>
+
+  <div class="showInfoDishRight">
+  <img class="previewExample3" src="/media/exampleCountry.jpg">
+  </div>
+</div>
+<div class="container">
+  <div class="map-container">
+    <img class="mapResponsive1" src="media/worldMap.png">
+     <img class="mapResponsive2" src="media/worldMapSmall.png">
+   
+    
+    
+    <a href="/home/algeria" >
+        <div class="point algeria tippy" title="Algeria"></div>
+      </a>
+      <a href="/home/armenia" >
+        <div class="point armenia tippy" title="Armenia"></div>
+      </a>
+      <a href="/home/france" >
+        <div class="point france tippy" title="France"></div>
+      </a>
+  </div>
+</div>
+
+
+

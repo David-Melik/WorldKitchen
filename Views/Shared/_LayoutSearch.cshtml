@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WorldKitchen</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<style>
+    /* Define keyframes for fading in the content */
+        @@keyframes fadeIn {
+            0% {
+                opacity: 0;           /* Start fully transparent */
+            visibility: hidden;   /* Initially hidden */
+            }
+            100% {
+                opacity: 1;           /* Fully visible */
+                visibility: visible;  /* Make it visible */
+                background-color: white;
+
+            }
+        }
+
+        /* Apply the animation to the body */
+        body {
+            background-color: rgba(34, 87, 122);
+   /* Start with blue background */
+            opacity: 0;               /* Start hidden */
+            visibility: hidden;       /* Start as hidden */
+            animation: fadeIn 1s ease forwards;  /* Animation runs for 2 seconds */
+            animation-delay: 0s;      /* Start the fade-in animation after 3 seconds */
+            min-height: 100vh;        /* Ensure the body takes up the full viewport height */
+            margin: 0;                /* Remove margins */
+            padding: 0;               /* Remove padding */
+        }
+        </style>
+
+  <body>
+     <header>
+            @Html.Partial("_NavBar")
+    </header>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    @Html.Partial("_Footer")
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,130 @@
+@model WorldKitchen.Models.BigViewModel
+@{
+    ViewData["title"] = "Page does not exists";
+       Layout = "/Views/Shared/_LayoutSearch.cshtml";
+}
+
+<style>
+        /* Define the animation */
+        @@keyframes blueFade {
+            0% {
+                
+                background-color: rgba(34, 87, 122); /* Start with blue */
+            }
+            100% {
+                background-color: white; /* End with white */
+            }
+        }
+
+        /* Apply the animation to the body */
+        .searchFade {
+            animation: blueFade 5s ease forwards; /* Runs for 2 seconds */
+        }
+</style>
+
+<div class="container" style="text-align: center;  color: #888;">
+    <h1 style="font-size: 150px; color: #888; margin-bottom: 0px;">404</h1>
+    <p style="font-size: 50px; ">Page not found</p>
+    <p>The page you are looking for doesn't exists or another issue occurred.</p>
+    <a type="button" class="btn btn-secondary" href="/"> Please navigate back to home page</a>
+
+</div>
+
+
+@{
+//Desactivate this part
+
+//<div class="container">
+//        <main role="main" class="pb-3">
+//
+//<h1>Search</h1>
+//
+//
+//    <form class="d-flex" asp-controller="Search">
+//                <input name="searchString" class="form-control me-1" type="search" placeholder="Search" aria-label="Search" value="@ViewData["CurrentFilter"]">
+//                <button class="btn btn-dark" type="submit">Search by name</button>
+//            </form>
+//
+//<p>
+//    <a asp-action="Create">Create New</a>
+//</p>
+//<table class="table">
+//    <thead>
+//        <tr>
+//           <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Name)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Country)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Traduction)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().VoiceName)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().ImagePreview)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Time)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Video)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Svg1)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Svg2)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Svg3)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Allergen)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().AllergnList)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().IngredientList)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().StepList)</th>
+//                    <th>@Html.DisplayNameFor(model => model.DishTable.FirstOrDefault().Nutrition)</th>        
+//        </tr>
+//    </thead>
+//    <tbody>
+//@foreach (var item in Model.DishTable) {
+//        <tr>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Name)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Country)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Traduction)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.VoiceName)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.ImagePreview)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Time)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Video)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Svg1)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Svg2)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Svg3)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Allergen)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.AllergnList)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.IngredientList)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.StepList)
+//            </td>
+//            <td>
+//                @Html.DisplayFor(modelItem => item.Nutrition)
+//            </td>
+//            <td>
+//                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+//                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+//                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+//            </td>
+//        </tr>
+//}
+//    </tbody>
+//</table>    
+//        </main>
+//</div>
+}

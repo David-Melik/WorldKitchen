@@ -1,0 +1,301 @@
+@if (Model.DishTable != null)
+{
+  @foreach (var itemD in Model.DishTable)
+  {
+    ViewData["Title"] = $"{itemD.Name} Page";
+  }
+}
+@functions {
+public string dishInfo(List<string> inputString, string option)
+    {
+        var result = new System.Text.StringBuilder();
+        if (option == "ingredient")
+        {
+           if (inputString == null || inputString.Count == 0)
+            {
+            return string.Empty;
+            }
+          result.Append($@" 
+          <section class=""dish-ingredients"">
+                      <h2 class=""dish-ingredients-title"">Ingredients</h2>
+            <div class=""dish-ingredients-container"">
+            <div class=""dish-main-ingredients"">
+            <ul>
+          ");
+          for (int i = 0; i < inputString.Count; i++)
+          {
+            if (inputString[i] == "optional")
+            {
+              result.Append($@" <div class=""dish-optional-ingredients"">
+              <h3>Optional:</h3>
+              <ul>
+              "); 
+              for (int j = i+1; j < inputString.Count; j++)
+              {
+                result.Append($@"<li class=""list-group-item"">
+                <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+                <span> {inputString[j]} </span>
+                </li>
+                ");
+              }
+              result.Append($@"
+                </ul>
+                </div>");
+              i = inputString.Count;
+              break;
+            }
+            result.Append($@"
+              <li class=""list-group-item"">
+              <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+              <span> {inputString[i]} </span>
+              </li>
+              ");
+          }
+          result.Append($@"
+          </ul>
+          </div>
+          ");
+
+          @if (Model.DishTable != null)
+          {
+            @foreach (var itemD in Model.DishTable)
+            {
+              if (itemD.Allergen is true)
+              {
+                var allergens = string.Join(", ", itemD.AllergnList);
+
+                  result.Append($@"
+                <div class=""dish-warning-panel"">
+                    <img src=""/media/attention.png"" alt=""Warning"" />
+                    <p>May contain allergens such as:</br> {allergens}</p>
+                </div>
+                </section>
+            ");
+                return result.ToString();
+              }
+            }
+          }
+          return result.ToString();
+        }
+        if (option == "step")
+        {
+          result.Append($@" 
+           <!-- Preparation Section -->
+           <section class=""dish-preparation-section"">
+                        <h2 class=""dish-ingredients-title"">Preparation</h2>
+           <div class=""dish-preparation-steps"">");
+          int counter = 1;
+          int total = inputString.Count;
+          if (inputString == null || inputString.Count == 0)
+          {
+            return string.Empty;
+          }
+          foreach (var item in inputString)
+          {
+            result.Append($@"     
+             <!-- Step {counter} -->
+                      <div class=""dish-step"">
+                         <input class=""form-check-input"" type=""checkbox"" onclick=""toggleStrikethrough(this)"" /> 
+
+                        <span class=""dish-step-header"">
+                          <span class=""step-number"">Step {counter} </span><span>/{total}</span></span>
+                        <div class=""dish-step-description"">
+                          <p>
+                           {item}
+                          </p>
+                        </div>
+                      </div>
+            ");
+            counter = counter + 1;
+          }
+          result.Append($@"
+            </div>
+            </section>
+            ");
+          return result.ToString();
+        }
+        if (option == "nutrition")
+        {
+          if ( inputString.Count != 10)
+          {
+            return string.Empty;
+          }
+          result.Append($@" 
+                <!-- Nutrition Properties Section -->
+      <section class=""dish-nutrition-section"">
+        <div class=""dish-nutrition-box"">
+          <section class=""performance-facts"">
+            <header class=""performance-facts__header"">
+              <h1 class=""performance-facts__title"">Nutrition Facts</h1>
+          
+            </header>
+            <table class=""performance-facts__table"">
+              <thead>
+                <tr>
+                  <th colspan=""3"" class=""small-info"">
+                    Amount Per 100g
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Calories</b>
+                    {inputString[0]}
+                  </th>
+          
+                </tr>
+                <tr class=""thick-row"">
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Total Fat</b>
+                    {inputString[1]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Saturated Fat
+                    {inputString[2]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Trans Fat
+                    {inputString[3]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Cholesterol</b>
+                    {inputString[4]}
+                  </th>
+          
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Sodium</b>
+                    {inputString[5]}
+                  </th>
+                </tr>
+                <tr>
+                  <th colspan=""2"">
+                    <b>Total Carbohydrate</b>
+                    {inputString[6]}
+                  </th>
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Dietary Fiber
+                    {inputString[7]}
+                  </th>
+                </tr>
+                <tr>
+                  <td class=""blank-cell"">
+                  </td>
+                  <th>
+                    Sugars
+                    {inputString[8]}
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+                <tr class=""thick-end"">
+                  <th colspan=""2"">
+                    <b>Protein</b>
+                    {inputString[9]}
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+      </div>
+      </section>
+          ");
+        return result.ToString();
+        }
+return string.Empty;
+    }
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WorldKitchen</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        @Html.Partial("_NavBar") 
+    </header>
+
+
+
+@if (Model.DishTable != null)
+{
+            @foreach (var itemD in Model.DishTable)
+            {
+           
+
+     <!-- Get Started and Picture Section -->
+      <section class="dish-get-started">
+        <div class="dish-image-container">
+          <img
+            src="@itemD.ImagePreview"
+            alt="Image recette et bouton commencer"
+          />
+          <div class="dish-overlay">
+            <h2>@itemD.Name</h2>
+            <a href="#videoStart" class="dish-get-started-button">Get Started!</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="dish-features">
+        @Html.Raw(itemD.Svg1)
+         @Html.Raw(itemD.Svg2)
+          @Html.Raw(itemD.Svg3)
+      </section>
+
+      <!-- Black Rectangle Under Features -->
+      <video id="videoStart"class="video" controls>
+        <source src="@itemD.Video" type="video/mp4">
+      </video>
+      <div class="dishInfo">
+@Html.Raw(dishInfo(itemD.IngredientList, "ingredient"))
+@Html.Raw(dishInfo(itemD.StepList, "step"))
+@Html.Raw(dishInfo(itemD.NutritionList, "nutrition"))
+      </div>
+
+
+          }
+}
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    @Html.Partial("_Footer")    
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>

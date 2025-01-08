@@ -1,0 +1,204 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="ieFEpt_y5Hz8trDGl6M4">
+    <mxGraphModel dx="454" dy="685" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sono2kKvDb-Px1hdgSL0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-1" target="sono2kKvDb-Px1hdgSL0-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-1" target="sono2kKvDb-Px1hdgSL0-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-1" target="sono2kKvDb-Px1hdgSL0-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-1" value="S" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="385" y="480" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-2" target="sono2kKvDb-Px1hdgSL0-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-2" value="IActionResult Search()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="225" y="620" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-4" target="sono2kKvDb-Px1hdgSL0-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-4" value="IActionResult Index()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="620" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.534;entryY=-0.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-1" target="sono2kKvDb-Px1hdgSL0-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-6" target="sono2kKvDb-Px1hdgSL0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-6" value="&lt;div&gt;string country = (&quot;&quot;);&lt;/div&gt;&lt;div&gt;string dishies = &quot;&quot;;&amp;nbsp;&lt;/div&gt;&lt;div&gt;string path = &quot;&quot;;&lt;/div&gt;&lt;div&gt;bool state = true;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="435" y="740" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-8" target="sono2kKvDb-Px1hdgSL0-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-8" value="IActionResult Errors()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="620" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-9" target="sono2kKvDb-Px1hdgSL0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-9" value="&lt;div&gt;string country = (&quot;&quot;);&lt;/div&gt;&lt;div&gt;string dishies = &quot;&quot;;&amp;nbsp;&lt;/div&gt;&lt;div&gt;string path = &quot;&quot;;&lt;/div&gt;&lt;div&gt;bool state = true;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="625" y="740" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-11" target="sono2kKvDb-Px1hdgSL0-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-11" value="&lt;div&gt;IActionResult France()&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="620" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-12" target="sono2kKvDb-Px1hdgSL0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-12" value="&lt;div&gt;string country = (&quot;france&quot;);&lt;/div&gt;&lt;div&gt;string dishies = &quot;hachisparmentier,pomme,poire&quot;;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;string path = Request.Path.ToString().ToLower();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;bool state = false;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="825" y="740" width="275" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-16" target="sono2kKvDb-Px1hdgSL0-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-16" value="checkUrl" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="642.5" y="910" width="115" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-23" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-20" target="sono2kKvDb-Px1hdgSL0-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-40" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-20" target="2w-vkjoon_6_aKNhuZL9-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="1190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-20" value="&lt;div&gt;IF&lt;/div&gt;&lt;div&gt;url end by Country&amp;nbsp;&lt;/div&gt;&lt;div&gt;OR&lt;/div&gt;&lt;div&gt;&amp;nbsp;url end by Country/&amp;nbsp;&lt;/div&gt;&lt;div&gt;OR&amp;nbsp;&lt;/div&gt;&lt;div&gt;state == true&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1050" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-25" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-22" target="sono2kKvDb-Px1hdgSL0-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-22" target="sono2kKvDb-Px1hdgSL0-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-22" value="If state == true" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1190" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-28" target="sono2kKvDb-Px1hdgSL0-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-28" value="Take All from&lt;div&gt;- CountryTable&lt;/div&gt;&lt;div&gt;- DishTable&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-29" value="Return&amp;nbsp;&lt;div&gt;View&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="1400" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-31" target="sono2kKvDb-Px1hdgSL0-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-31" value="capatalizeCountry (just the first letter)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-33" target="sono2kKvDb-Px1hdgSL0-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-33" value="Takes where capatalizeCountry&lt;div&gt;- CountryTable&lt;/div&gt;&lt;div&gt;- DishTable&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-35" value="Return&amp;nbsp;&lt;div&gt;View&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="815" y="1480" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-46" value="Return&amp;nbsp;&lt;div&gt;View&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="250" y="840" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-53" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-50" target="sono2kKvDb-Px1hdgSL0-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-37" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-50" target="2w-vkjoon_6_aKNhuZL9-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="1803" />
+              <mxPoint x="90" y="1403" />
+              <mxPoint x="445" y="1403" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-50" value="IF&lt;div&gt;url CONTAINS same as currentDish&lt;/div&gt;&lt;div&gt;AND&lt;/div&gt;&lt;div&gt;url END with urlDish&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="464.98" y="1720" width="230" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-52" target="sono2kKvDb-Px1hdgSL0-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-52" value="currentDish = uncapatlaziz and remove space" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="684.98" y="1935" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-54" target="sono2kKvDb-Px1hdgSL0-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-54" value="&lt;div&gt;Takes where Currentdish&lt;br&gt;&lt;/div&gt;&lt;div&gt;- DishTable&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="685.03" y="2045" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-55" value="Return&amp;nbsp;&lt;div&gt;View (&lt;span style=&quot;background-color: initial;&quot;&gt;DishRedirect)&lt;/span&gt;&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="637.45" y="2165" width="215.05" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sono2kKvDb-Px1hdgSL0-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="309.9499999999998" y="2090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-66" value="For home/error" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="1140" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-67" value="For Dish" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1030" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-68" value="For country" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1220" width="155" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sono2kKvDb-Px1hdgSL0-69" value="Redirect&lt;div&gt;Controller&amp;nbsp;&lt;/div&gt;&lt;div&gt;Search&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="232.5" y="720" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2w-vkjoon_6_aKNhuZL9-18" target="2w-vkjoon_6_aKNhuZL9-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2w-vkjoon_6_aKNhuZL9-18" target="2w-vkjoon_6_aKNhuZL9-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="229.94999999999982" y="1567.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-18" value="FOREACH&amp;nbsp;&lt;div&gt;itemD in&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div&gt;DishTable that&amp;nbsp;&lt;/div&gt;&lt;div&gt;CONTAINS Country&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="369.95000000000005" y="1422.5" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2w-vkjoon_6_aKNhuZL9-20" target="2w-vkjoon_6_aKNhuZL9-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-20" value="dishArray = &quot;&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="384.95000000000005" y="1302.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2w-vkjoon_6_aKNhuZL9-21" target="sono2kKvDb-Px1hdgSL0-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-21" value="&lt;div&gt;dishrenamed = itmeD.Name remove space and lower case&lt;/div&gt;&lt;div&gt;urlDish = /home/country/dishname&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1580" width="350" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-32" value="To detect what dish&lt;div&gt;you have on the country&lt;/div&gt;&lt;div&gt;THANKS TO THE SQL&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1280" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-33" value="Check if it the actual Dish" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="1940" width="204.05" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-34" value="&lt;span class=&quot;hljs-built_in&quot;&gt;string&lt;/span&gt;&amp;nbsp;DishRedirect = original.Replace(&lt;span class=&quot;hljs-string&quot;&gt;&quot; &quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;&quot;&lt;/span&gt;).ToLower();" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="684.98" y="1855" width="270.05" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2w-vkjoon_6_aKNhuZL9-35" value="Return&amp;nbsp;&lt;div&gt;View&lt;/div&gt;&lt;div&gt;ERROR&lt;/div&gt;&lt;div&gt;404&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1580" width="170" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
